@@ -108,14 +108,12 @@ Prototypes: 10 domain-focused prototypes for cross-domain reasoning evaluation
 Source: Extended from domain-specific ontology for data-driven solution design
 
 Evaluation Datasets
-
 Synthetic Prompt Dataset: ~700 domain triples for empirical testing
 User Query Collection: Real-world queries across multiple technical domains
 Expert Evaluation Set: Human assessment data from 7 PhD candidates
 Ground Truth Annotations: Manually validated reasoning thread examples
 
 Model Training Data
-
 Triple Extraction Corpus: Domain-specific text for Word2Vec training
 Graph Embeddings: Pre-trained on full domain knowledge graph
 Sentence Transformers: MS MARCO DistilBERT fine-tuned for domain alignment
@@ -228,13 +226,6 @@ Domain Specificity: Relevance and accuracy within target domain contexts
 Technical Specificity: Depth and precision of technical knowledge integration
 Understandability: Clarity and accessibility for target user populations
 User Focus: Alignment with user intent and contextual requirements
-
-Experimental Results
-Automated Evaluation Results
-MethodActionabilityCoherenceDomain Spec.Tech Spec.Understand.User FocusOverallMCTS0.748±0.2980.485±0.2260.548±0.2530.712±0.2820.689±0.0520.723±0.0480.627GNN0.756±0.0680.489±0.0850.585±0.1780.575±0.0890.656±0.0580.634±0.0520.611RM0.694±0.1180.606±0.1250.583±0.1360.536±0.1250.734±0.0410.756±0.0390.600
-Human Expert Evaluation (5-point scale)
-MethodActionabilityCoherenceDomain Spec.Tech Spec.Understand.User FocusOverallMCTS4.2±0.74.1±0.84.0±0.84.0±0.74.3±0.64.1±0.74.1GNN3.1±0.93.2±0.93.4±0.83.3±0.83.8±0.73.7±0.83.4RM2.8±0.82.9±0.92.7±0.92.6±0.84.1±0.63.9±0.73.2
-Evaluation Methodology
 
 Baseline Comparison: Against GNN-only and Retrieval Methods (RM)
 Cross-Domain Assessment: Evaluation across healthcare, manufacturing, finance, and education domains

@@ -7,7 +7,6 @@ This repository contains the complete implementation of ReT-Eval, a two-phase fr
 📄 Paper: arXiv:2408.xxxxx
 🎯 Abstract: We introduce ReT-Eval, a two-phase framework that constructs semantically coherent knowledge threads and evaluates effective reasoning paths by integrating user knowledge threads (KU), domain-specific knowledge graphs (KGD), and intrinsic LLM representations (KL) through prototype-inspired reasoning and Monte Carlo Tree Search optimization.
 👨‍💼 Authors: Daniel Burkhardt
-🏛️ Institution: [Your Institution]
 
 🌟 Key Contributions
 Two-Phase ReT-Eval Framework: Novel approach combining Prototype Construction (PC) and Effectiveness Evaluation (EE) phases for reasoning thread generation
@@ -46,7 +45,7 @@ Node.js 16+ (for local development)
 
 One-Command Setup
 bash# Clone repository with LFS
-git clone https://github.com/danibu88/gen_reasoning-threads-paper.git
+git clone https://github.com/danibu88/gen_reasoning_threads.git
 cd gen_reasoning-threads-paper
 
 # Download models and setup data
@@ -83,6 +82,7 @@ Elasticsearch: http://localhost:9200
 ├── 🛠️ scripts/                        # Setup and utility scripts
 ├── 📚 docs/                           # Detailed documentation
 └── 💡 examples/                       # Usage examples and tutorials
+
 🔬 Reproducibility
 Reproduce Paper Results
 bash# Run complete ReT-Eval evaluation pipeline

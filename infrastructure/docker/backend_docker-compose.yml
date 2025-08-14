@@ -1,0 +1,41 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ../../src/backend/FlaskBackend/git-lfs-3.5.1
+      dockerfile: backend_Dockerfile
+    ports:
+      - "5601:3002"
+    environment:
+      - OLLAMA_HOST=http://localhost:11434
+      - ES=https://es.findyoursolution.ai
+    volumes:
+      - ./models:/root/.ollama
+      - /root/opt/findyoursolution/models:/root/opt/findyoursolution/models
+      - /root/opt/findyoursolution/data:/app/data
+      - /root/config/certs:/root/config/certs:ro
+    command: ["/app/entrypoint.sh"]
+    networks:
+      - elk
+    restart: unless-stopped
+
+  data-loader:
+    image: python:3.9-slim
+    volumes:
+      - ./ESupload.py:/app/ESupload.py
+      - /root/opt/findyoursolution/data:/app/data
+      - /root/config/certs:/root/config/certs:ro
+    working_dir: /app
+    command: >
+      bash -c "pip install pandas elasticsearch python-dotenv && python ESupload.py"
+    environment:
+      - ELASTICSEARCH_HOST=https://es.findyoursolution.ai
+      - ELASTICSEARCH_USER=elastic
+      - ELASTICSEARCH_PASSWORD=fstiaiotkgdev
+    networks:
+      - elk
+    restart: "no"
+
+networks:
+  elk:
+    driver: bridge

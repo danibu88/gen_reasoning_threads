@@ -280,11 +280,7 @@ bibtex@misc{burkhardt2025reteval,
 }
 
 📜 License
-<<<<<<< HEAD
 This project is licensed under the MIT License - see the License file for details.
-=======
-This project is licensed under the MIT License - see the LICENSE file for details.
->>>>>>> a5b818f22950d31560a59637f1e03a97b6d9c9de
 
 🙏 Acknowledgments
 Neo4j Community: For graph database infrastructure

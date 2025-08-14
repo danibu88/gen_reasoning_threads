@@ -1,0 +1,70 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@apollo/client": "^3.7.2",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^5.16.7",
+    "@mui/material": "^5.16.7",
+    "@mui/styles": "^6.1.2",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "ajv": "^8.17.1",
+    "d3": "^7.8.4",
+    "d3-drag": "^3.0.0",
+    "d3-force": "^3.0.0",
+    "d3-scale": "^4.0.2",
+    "graphql": "^16.6.0",
+    "neo4j-driver": "^5.28.1",
+    "neovis.js": "^2.0.2",
+    "next": "^13.0.6",
+    "openai": "^4.67.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.13",
+    "react-force-graph-2d": "^1.23.13",
+    "react-force-graph-3d": "^1.24.4",
+    "react-icons": "^4.7.1",
+    "react-loader-spinner": "^6.1.6",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
+    "react-transition-group": "^4.4.2",
+    "styletron-react": "^6.1.0-beta.2",
+    "three": "^0.169.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "dev": "env-cmd -f .env.development react-scripts start",
+    "build": "react-scripts build",
+    "deploy-to-server": "node vercel-deploy.js",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "build:prod": "env-cmd -f .env.production react-scripts build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "env-cmd": "^10.1.0",
+    "eslint": "^8.56.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "react-scripts": "5.0.1"
+  }
+}

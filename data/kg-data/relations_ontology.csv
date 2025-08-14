@@ -1,0 +1,8 @@
+﻿Relation,Description
+ns0_IsSolvedBY,indicates usually an opportunity that is solved by an instance related to a solution class 
+ns0_Is_a ,shows a type relationship 
+ns0_Is_Implementing ,"indicates usually a solution concept on layers of system, data, or technology that implements a concept on Autonomization or Business, usually related to the class of Task "
+ns0_Is_part_of , shows an aggregation or composition to a combined solution 
+ns0_requires , indicates a solution instance that requires another solution instance 
+ns2_BelongsTo ,indicates a solution instance that belongs to another solution instance 
+ns2_IsDetermining ,"shows determination of an instance to another instance, usually from a Business or Autonomization instance to a solution instance but also governance to a solution instance "

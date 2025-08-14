@@ -1,0 +1,9 @@
+{
+  "name": "flask-backend-deployer",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Building deployment wrapper'",
+    "deploy-to-server": "node vercel-deploy.js"
+  }
+}

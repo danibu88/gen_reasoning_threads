@@ -1,0 +1,23 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "graphql.js",
+  "scripts": {
+    "start": "node graphql.js",
+    "build": "echo 'No build step needed for GraphQL server'",
+    "deploy-to-server": "echo 'Deployment handled by Docker and CI/CD'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@neo4j/graphql": "^3.13.0",
+    "@neo4j/introspector": "^1.0.2",
+    "apollo-server": "^3.11.1",
+    "dotenv": "^16.5.0",
+    "graphql": "^16.8.1",
+    "neo4j-driver": "^5.3.0"
+  }
+}

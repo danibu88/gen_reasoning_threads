@@ -1,0 +1,3389 @@
+@prefix ns1: <http://ainf.aau.at/ontodebug#> .
+@prefix ns2: <http://www.semanticweb.org/danielburkhardt/ontologies/2021/1/untitled-ontology-13#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<3D_Meshes> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Object_Detection> .
+
+<API> a owl:DatatypeProperty ;
+    rdfs:domain <Application> ;
+    rdfs:range xsd:string .
+
+<Access_Management> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Requires> ;
+            owl:someValuesFrom <Access_Control> ],
+        <Governance> .
+
+<Action_Space> a <Acting>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Reinforcement_Learning> .
+
+<Activation> a <NeuralNetwork_Creation>,
+        owl:NamedIndividual .
+
+<Active_Learning> a <Learning_Algorithm>,
+        owl:NamedIndividual .
+
+<AdaBoost> a <Optimization_Algorithm>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Classification_multiclass_boost>,
+        <Classification_multilabel_boost> .
+
+<Adam> a <Optimization_Algorithm>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Policy_Search> .
+
+<Advantage_Actor_Critic> a <Reinforcement>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Policy_Search> ;
+    <Is_part_of> <Reinforcement_Learning> .
+
+<Application_Engineer> a <Roles>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Data_Science> .
+
+<Asnchronous_Advantage_Actor_Critic> a <Reinforcement>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Policy_Search> ;
+    <Is_part_of> <Reinforcement_Learning> .
+
+<Asynchronous> a <Data_Integration>,
+        owl:NamedIndividual .
+
+<Attention> a <NeuralNetwork_Creation>,
+        owl:NamedIndividual .
+
+<Audio> a <Data_Type>,
+        <Unstructured_Dataset>,
+        owl:NamedIndividual .
+
+<Authentication> a owl:Class ;
+    rdfs:subClassOf <Identity_Management> .
+
+<Authorization> a owl:Class ;
+    rdfs:subClassOf <Identity_Management> .
+
+<Auto_Encoder> a <Neural_Networks>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Anomaly_Detection> .
+
+<Automated_Production> a <Opportunity>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Production> .
+
+<Autoregressive_Model> a <Neural_Networks>,
+        owl:NamedIndividual .
+
+<Backprop> a <NeuralNetwork_Creation>,
+        owl:NamedIndividual .
+
+<BigData_Storage> a <Storage>,
+        owl:NamedIndividual .
+
+<Blackboard> a <Mud_to_Structure_Architectural_Patterns>,
+        owl:NamedIndividual .
+
+<Broker> a <Distributed_Architectural_Patterns>,
+        owl:NamedIndividual .
+
+<CPU> a <Computing_Units>,
+        owl:NamedIndividual .
+
+<Cache> a <Communication>,
+        owl:NamedIndividual .
+
+<Capitalization> a <Data_Transformation>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Text_Processing> .
+
+<Catalogue> a owl:Class ;
+    rdfs:subClassOf <4_Data> .
+
+<Change_Data_Capture> a <Data_Integration>,
+        owl:NamedIndividual .
+
+<Charts> a <Visualization>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Visualization> .
+
+<ClientSide_Model_Deployment> a <Model_Deployment>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Decentralized_Analytics_Architectural_Pattern> .
+
+<Client_Dispatcher_Server> a <Communication>,
+        owl:NamedIndividual .
+
+<Cloud> a <Data_Storage>,
+        owl:NamedIndividual ;
+    ns2:BelongsTo <Centralized> .
+
+<Cloud_Analytics> a <Analytics_Design>,
+        owl:NamedIndividual ;
+    <Is_a> <Centralized_Analytics_Architectural_Pattern> .
+
+<Clustering_nonlinear> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Clustering> .
+
+<Collaborative_Filtering> a <Selection>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Recommendations> .
+
+<Column-oriented> a <Data_Organization>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Syntactic_Data_Fusion> .
+
+<Command_Processor> a <Management>,
+        owl:NamedIndividual .
+
+<Complete_Dataset> a owl:Class ;
+    rdfs:subClassOf <Collection> ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue true ;
+            owl:onProperty <completeness> ] .
+
+<Component> a owl:Class ;
+    rdfs:subClassOf <1_Business> .
+
+<Consistent_Dataset> a owl:Class ;
+    rdfs:subClassOf <Collection> ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue true ;
+            owl:onProperty <consistency> ] .
+
+<Contact_Lense_Personalization> a <Opportunity>,
+        owl:NamedIndividual ;
+    <IsSolvedBy> <Classification>,
+        <Clustering>,
+        <Image_Recognition>,
+        <Regression> ;
+    <Is_part_of> <Healthcare> ;
+    ns2:BelongsTo <Contact_lenses> .
+
+<Container> a <Storage>,
+        owl:NamedIndividual .
+
+<Content_based_Filtering> a <Selection>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Recommendations> .
+
+<Continous_Bag_of_Words> a <Natural_Language_Processing>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Word2Vec> .
+
+<Controller> a <Control>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Policy_Search> .
+
+<Convolutional_Layer> a <NeuralNetwork_Creation>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Convolutional_NN> ;
+    <number_of_convolutional_layers> 1 .
+
+<Cosine_Similarity> a <Geometry>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Similarity> .
+
+<Cryptography> a <Data_Protection>,
+        owl:NamedIndividual .
+
+<Dashboard> a <Visualization>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Visualization> .
+
+<Data_Cleaning> a owl:Class ;
+    rdfs:subClassOf <Processing> .
+
+<Data_Consumer> a <Roles>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Data_Science> .
+
+<Data_Engineer> a <Roles>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Data_Science> .
+
+<Data_Flow_Engine> a <Data_Processing>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Data_Heterogeneity_Dissolve> .
+
+<Data_Lake> a <Storage>,
+        owl:NamedIndividual .
+
+<Data_Owner> a <Roles>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Data_Science> .
+
+<Data_Parsing> a <Data_Processing_Task>,
+        <Data_Transformation>,
+        owl:NamedIndividual .
+
+<Data_Pipeline_Realtime> a <Data_Pipeline>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Three_Tier> .
+
+<Data_Plot> a <Visualization>,
+        owl:NamedIndividual .
+
+<Data_Policy> a owl:Class ;
+    rdfs:subClassOf <Governance> .
+
+<Data_Principles> a owl:Class ;
+    rdfs:subClassOf <Data_Management> .
+
+<Data_Processes> a owl:Class ;
+    rdfs:subClassOf <Data_Management> .
+
+<Data_Provider> a <Roles>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Data_Science> .
+
+<Data_Quality> a owl:Class ;
+    rdfs:subClassOf <Data_Management> .
+
+<Data_Requirements> a owl:Class ;
+    rdfs:subClassOf <Data_Management> .
+
+<Data_Risk> a owl:Class ;
+    rdfs:subClassOf <Data_Management> .
+
+<Data_Standards> a owl:Class ;
+    rdfs:subClassOf <Data_Management> .
+
+<Data_Steward> a <Roles>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Data_Science> .
+
+<Data_Strategy> a owl:Class ;
+    rdfs:subClassOf <Governance> .
+
+<Data_Value> a owl:Class ;
+    rdfs:subClassOf <Governance> .
+
+<Data_Warehouse> a <Storage>,
+        owl:NamedIndividual .
+
+<Decentralized> a <Communication_Structure>,
+        <System_Orientation>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Healthcare>,
+        <Production>,
+        <Timber_Industry> .
+
+<Decision_Tree> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Classification_binary>,
+        <Classification_binary_imbalanced>,
+        <Classification_multiclass>,
+        <Classification_multilabel> ;
+    <Is_part_of> <Monte_Carlo_Tree_Search> .
+
+<Decoder> a <NeuralNetwork_Creation>,
+        owl:NamedIndividual .
+
+<Deep_Boltzmann_Machine> a <Neural_Networks>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Object_Detection>,
+        <Speech_Query_Detection>,
+        <Text_Representation_Extraction> .
+
+<Deep_Reinforcement_Learning> a <Learning_Algorithm>,
+        owl:NamedIndividual ;
+    <Is_a> <Reinforcement_Learning> ;
+    <Is_implementing> <Policy_Search> .
+
+<DevOps_Engineer> a <Roles>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Data_Science> .
+
+<Directed_Acyclic_Graph> a <Dataflow>,
+        owl:NamedIndividual .
+
+<Distributed_Learning> a <Learning_Algorithm>,
+        owl:NamedIndividual .
+
+<Document_and_Content_Management> a <Storage>,
+        owl:NamedIndividual .
+
+<Edge_Analytics> a <Analytics_Design>,
+        owl:NamedIndividual ;
+    <Is_a> <Decentralized_Analytics_Architectural_Pattern> .
+
+<Encoder> a <NeuralNetwork_Creation>,
+        owl:NamedIndividual .
+
+<Ensemble_Learning> a <Learning_Algorithm>,
+        owl:NamedIndividual .
+
+<Epsilon_Greedy_Strategy> a <Reinforcement>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Policy_Search> ;
+    <Is_implementing> <Strategy_Selection> ;
+    <Is_part_of> <Q-Learning> ;
+    ns2:IsDetermining <Exploitation>,
+        <Exploration> .
+
+<Euclidean_Distance> a <Geometry>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Similarity> .
+
+<Evaluators> a <Control>,
+        <Validation>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Policy_Search> .
+
+<Event_Driven> a <Data_Integration>,
+        owl:NamedIndividual .
+
+<Event_Series> a <Data_Type>,
+        owl:NamedIndividual .
+
+<Executor> a <Control>,
+        owl:NamedIndividual .
+
+<Exploiters> a <Control>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Exploitation> ;
+    <Is_part_of> <Multi_Agent_Learning> .
+
+<External_System> a <Storage>,
+        owl:NamedIndividual ;
+    ns2:ConnectsTo <Platform> .
+
+<Extract_Transform_Load> a <Data_Corpus_Creation>,
+        <Data_Integration>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Process_Optimization> .
+
+<F1_Score> a <Classification_Metrics>,
+        owl:NamedIndividual .
+
+<Facility_Owner> a <Roles>,
+        owl:NamedIndividual .
+
+<Feature_Learning> a <Learning_Algorithm>,
+        owl:NamedIndividual .
+
+<Feature_Map> a <Data_Mapping>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Feature_Extraction> .
+
+<Feature_Store> a <Data_Enhancement>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Feature_Extraction> ;
+    <Requires> <Feature_Engineering> .
+
+<Feature_Tuning> a owl:Class ;
+    rdfs:subClassOf <Training> .
+
+<Federated_Learning> a <Learning_Algorithm>,
+        owl:NamedIndividual ;
+    <Is_a> <Decentralized_Analytics_Architectural_Pattern> .
+
+<Few_Shot_Learning> a <Learning_Algorithm>,
+        owl:NamedIndividual .
+
+<Flat_File> a <Data_Organization>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Syntactic_Data_Fusion> .
+
+<Forwarder_Receiver> a <Communication>,
+        owl:NamedIndividual .
+
+<Fragmented> a <Communication_Structure>,
+        <System_Orientation>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Healthcare> .
+
+<Fragmented_Analytics_Architectural_Pattern> a <Analytics_Design>,
+        owl:NamedIndividual .
+
+<Fragmented_Data_Architectural_Pattern> a <Data_Storage>,
+        owl:NamedIndividual .
+
+<Fully_Connected_Layer> a <NeuralNetwork_Creation>,
+        owl:NamedIndividual .
+
+<Function> a owl:Class ;
+    rdfs:subClassOf <Model> .
+
+<GLoVE> a <Natural_Language_Processing>,
+        owl:NamedIndividual .
+
+<Gateway_Mediated_Edge_Connectivity_and_Management> a <Data_Provision>,
+        owl:NamedIndividual ;
+    <Is_a> <Decentralized_Data_Architectural_Pattern> .
+
+<Generative_Adversarial_Network> a <Neural_Networks>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Data_Augmentation>,
+        <Image_Generation> .
+
+<Genetic_Algorithms> a <Hyperparameter_Setting>,
+        owl:NamedIndividual .
+
+<GradientBoost> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Classification_multiclass_boost>,
+        <Classification_multilabel_boost> .
+
+<Graph_adversarial_method> a <Neural_Networks>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Data_Augmentation> .
+
+<Graph_autoencoder> a <Neural_Networks>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Embeddings> .
+
+<Graph_convolutional_NN> a <Neural_Networks>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Embeddings> .
+
+<Graph_recurrent_NN> a <Neural_Networks>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Embeddings> .
+
+<Graph_reinforcement_learning> a <Learning_Algorithm>,
+        owl:NamedIndividual ;
+    <Is_a> <Reinforcement_Learning> ;
+    <Is_part_of> <Embeddings> .
+
+<Grid_Search> a <Hyperparameter_Setting>,
+        owl:NamedIndividual .
+
+<Hardware> a owl:Class ;
+    rdfs:subClassOf <Edge>,
+        <Enterprise>,
+        <Fog>,
+        <Platform> .
+
+<Hierarchical> a <Data_Organization>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Syntactic_Data_Fusion> .
+
+<HighDimensional_Dataset> a owl:Class ;
+    rdfs:subClassOf <Collection> ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue true ;
+            owl:onProperty <dimensionality> ] .
+
+<Hub_and_Spoke> a <Data_Interaction>,
+        owl:NamedIndividual .
+
+<Identity> a owl:Class ;
+    rdfs:subClassOf <Identity_Management> .
+
+<Identity_Provider> a <Roles>,
+        owl:NamedIndividual .
+
+<Imitation_Learning> a <Learning_Algorithm>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Policy_Search> ;
+    <Requires> <Demonstrations> .
+
+<Index> a <Access_Control>,
+        owl:NamedIndividual .
+
+<Inference_Batch_Pipeline> a <Inference>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Batch> .
+
+<Inference_Hybrid_Pipeline> a <Inference>,
+        owl:NamedIndividual .
+
+<Inference_Streaming_Pipeline> a <Inference>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Streaming> .
+
+<Information_Visualization> a <Service>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Contact_Lense_Application>,
+        <Healthcare_Assistant_Application>,
+        <Mobility_Behavior_Application>,
+        <Risk_Management_Application> .
+
+<Insurance_Company> a <Roles>,
+        owl:NamedIndividual .
+
+<IsSolvedBy> a owl:ObjectProperty .
+
+<Is_a> a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:subPropertyOf ns2:BelongsTo .
+
+<Isomap> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Nonlinear_Dimensionality_Reduction> .
+
+<Jaro_Winkler> a <Natural_Language_Processing>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Similarity> .
+
+<K-Means> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Clustering_linear> ;
+    ns2:CallsForExecution <Feed_Forward_NN>,
+        <Long_Short_Term_Memory> .
+
+<K_Nearest_Neighbors> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Classification_binary>,
+        <Classification_multiclass>,
+        <Classification_multilabel>,
+        <Logistic_Regression>,
+        <Similarity> .
+
+<Kappa> a <Data_Pipeline>,
+        owl:NamedIndividual ;
+    <Is_a> <Data_Pipeline_Stream> .
+
+<Key_Value_Pair> a <Data_Organization>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Syntactic_Data_Fusion> .
+
+<Labelling> a <Data_Mapping>,
+        owl:NamedIndividual .
+
+<Latent_variable> a <Feature_Extraction>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Exploration> .
+
+<Layer_wise_greedy> a <Optimization_Algorithm>,
+        owl:NamedIndividual .
+
+<Layered_Databus> a <Data_Provision>,
+        owl:NamedIndividual ;
+    <Is_a> <Aggregated_Data_Architectural_Pattern> .
+
+<Levenshtein> a <Natural_Language_Processing>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Similarity> .
+
+<Linear_Discriminant_Analysis> a <Data_Transformation>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Dimensionality_Reduction> .
+
+<Linear_Regression> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Regression> .
+
+<Locally_Linear_Embeddings> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_a> <Embeddings> ;
+    <Is_implementing> <Nonlinear_Dimensionality_Reduction> .
+
+<Log_Shipping> a <Data_Replication>,
+        owl:NamedIndividual .
+
+<LowDimensionality_Dataset> a owl:Class ;
+    rdfs:subClassOf <Collection> ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue false ;
+            owl:onProperty <dimensionality> ] .
+
+<ML_Engineer> a <Roles>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Data_Science> .
+
+<Machine_Translation> a <Solution>,
+        owl:NamedIndividual .
+
+<Main_Agent> a <Control>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Exploitation> ;
+    <Is_part_of> <Multi_Agent_Learning> .
+
+<Manual_Tuning> a <Hyperparameter_Setting>,
+        owl:NamedIndividual .
+
+<Map_Reduce> a <Parallel_Computation>,
+        owl:NamedIndividual .
+
+<Markov_Model> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Sequence_Operations_over_Time> .
+
+<Master_Slave> a <Organization_of_Work>,
+        owl:NamedIndividual .
+
+<Matrix> a <Visualization>,
+        owl:NamedIndividual .
+
+<Mean_Absolute_Error> a <Regression_Metrics>,
+        owl:NamedIndividual .
+
+<Mean_Squared_Error> a <Regression_Metrics>,
+        owl:NamedIndividual .
+
+<Medium_Dataset> a owl:Class ;
+    rdfs:subClassOf <Collection> ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( <Collection> [ a owl:Restriction ;
+                        owl:onProperty <volume> ;
+                        owl:someValuesFrom [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:integer ;
+                                owl:withRestrictions ( [ xsd:minInclusive 100 ] ) ] ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( <Collection> [ a owl:Restriction ;
+                        owl:onProperty <volume> ;
+                        owl:someValuesFrom [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:integer ;
+                                owl:withRestrictions ( [ xsd:maxInclusive 1000 ] ) ] ] ) ] .
+
+<Message_Queue> a <Communication>,
+        owl:NamedIndividual .
+
+<Metadata> a owl:Class ;
+    rdfs:subClassOf <Data_Management> .
+
+<Microkernel> a <Distributed_Architectural_Patterns>,
+        owl:NamedIndividual .
+
+<Mirroring> a <Data_Replication>,
+        owl:NamedIndividual .
+
+<Model_Interpretation> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Training> ],
+        <Explainability> .
+
+<Model_View_Controller> a <Interactive_Architectural_Patterns>,
+        owl:NamedIndividual .
+
+<Monitoring> a owl:Class ;
+    rdfs:subClassOf <Deployment> .
+
+<Monitoring_and_Diagnostics> a owl:Class ;
+    rdfs:subClassOf <Operation> .
+
+<Monte_Carlo> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Monte_Carlo_Tree_Search>,
+        <Sequence_Operations_over_Time> .
+
+<Multi_Agent> a <Control>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Policy_Search> ;
+    <Is_part_of> <Multi_Agent_Learning> .
+
+<Multi_Dimensional_Scaling> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Nonlinear_Dimensionality_Reduction> .
+
+<Multidimensional> a <Data_Organization>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Syntactic_Data_Fusion> .
+
+<NNLM> a <Natural_Language_Processing>,
+        owl:NamedIndividual .
+
+<Naive_Bayesian> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Bayesian_Optimization> ;
+    <Is_part_of> <Classification_binary>,
+        <Classification_multiclass> .
+
+<Natural_Language_Generation> a <Natural_Language_Processing>,
+        <Solution>,
+        owl:NamedIndividual .
+
+<Near_Real_Time> a <Data_Integration>,
+        owl:NamedIndividual .
+
+<No_Shot_Learning> a <Learning_Algorithm>,
+        owl:NamedIndividual .
+
+<Non-Relational> a <Data_Organization>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Syntactic_Data_Fusion> .
+
+<Normalization> a <Data_Processing_Task>,
+        <Data_Transformation>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Data_Processing_linear>,
+        <Data_Processing_nonlinear> .
+
+<OLAP> a <Analytics_Design>,
+        owl:NamedIndividual .
+
+<OLTP> a <Data_Processing>,
+        owl:NamedIndividual .
+
+<Offline> a <Data_Provision>,
+        owl:NamedIndividual ;
+    <Requires> <Data_Pipeline_Batch>,
+        <Lambda> ;
+    ns2:IsDetermining <Recommendations> .
+
+<One_Hot_Encoding> a <Data_Transformation>,
+        owl:NamedIndividual .
+
+<Online> a <Data_Provision>,
+        owl:NamedIndividual ;
+    <Requires> <Data_Pipeline_Stream>,
+        <Lambda> ;
+    ns2:IsDetermining <Recommendations> .
+
+<Ontology_based> a <Data_Organization>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Create_Entity_Label>,
+        <Create_Entity_Relationships>,
+        <Entity_Linking>,
+        <Out_of_Vocabulary_Resolution>,
+        <Semantic_Data_Fusion>,
+        <Syntactic_Data_Fusion> ;
+    ns2:IsDetermining <Graph_based_Database> .
+
+<Operation_Management> a owl:Class ;
+    rdfs:subClassOf <Operation> .
+
+<Operator> a <Distributed_Architectural_Patterns>,
+        owl:NamedIndividual .
+
+<Optimization> a owl:Class ;
+    rdfs:subClassOf <Operation> .
+
+<Optimizer> a <NeuralNetwork_Creation>,
+        owl:NamedIndividual .
+
+<Output_Explanation> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Deployment> ],
+        <Explainability> .
+
+<Pi> a <Data_Storage>,
+        owl:NamedIndividual ;
+    ns2:BelongsTo <Centralized> .
+
+<Pipes> a <Communication>,
+        owl:NamedIndividual .
+
+<Pipes_and_Filters> a <Mud_to_Structure_Architectural_Patterns>,
+        owl:NamedIndividual .
+
+<Point_to_Point> a <Data_Interaction>,
+        owl:NamedIndividual .
+
+<Policy_Gradient_Algorithm> a <Reinforcement>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Policy_Search> ;
+    <Is_implementing> <AlphaStar> ;
+    <Is_part_of> <Reinforcement_Learning> .
+
+<Pooling> a <NeuralNetwork_Creation>,
+        owl:NamedIndividual .
+
+<Presentation_Abstraction_Control> a <Interactive_Architectural_Patterns>,
+        owl:NamedIndividual .
+
+<Principal_Component_Analysis> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Dimensionality_Reduction> .
+
+<Process_Text_Data> a <Data_Processing_Task>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Triple_Creation> .
+
+<Processing_Engine> a <Data_Processing>,
+        owl:NamedIndividual .
+
+<Prognostics> a owl:Class ;
+    rdfs:subClassOf <Operation> .
+
+<Proprietary_Data_Storage> a <Data_Storage>,
+        owl:NamedIndividual ;
+    ns2:BelongsTo <Centralized> .
+
+<Provisioning_and_Deployment> a owl:Class ;
+    rdfs:subClassOf <Operation> .
+
+<Proxy> a <Access_Control>,
+        owl:NamedIndividual .
+
+<Public_Key_Infrastructure> a <Access_Control>,
+        owl:NamedIndividual .
+
+<Publish_Subscribe> a <Data_Interaction>,
+        owl:NamedIndividual .
+
+<Quality_Assurance> a <Opportunity>,
+        owl:NamedIndividual ;
+    <IsSolvedBy> <Classification>,
+        <Image_Recognition>,
+        <Object_Detection>,
+        <Regression> ;
+    <Is_part_of> <Production> .
+
+<R_Squared> a <Regression_Metrics>,
+        owl:NamedIndividual .
+
+<RandomForest> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Classification_multiclass>,
+        <Classification_multiclass_bagging>,
+        <Classification_multilabel_bagging> .
+
+<Real_Time> a <Data_Integration>,
+        owl:NamedIndividual .
+
+<Realtime_Inference> a <Analytics_Design>,
+        owl:NamedIndividual .
+
+<Recurrent_Layer> a <NeuralNetwork_Creation>,
+        owl:NamedIndividual .
+
+<Recurrent_NN> a <Neural_Networks>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Sequence_Operations_over_Time> .
+
+<Regular_Expression_Matching> a <Data_Transformation>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Text_Processing> .
+
+<Relational> a <Data_Organization>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Syntactic_Data_Fusion>,
+        <TabNet> .
+
+<Remove_Punctuation> a <Data_Transformation>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Text_Processing> .
+
+<Remove_Stop_Words> a <Data_Transformation>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Text_Processing> .
+
+<Request_Response> a <Communication>,
+        owl:NamedIndividual .
+
+<Reward_Definition> a <Learning>,
+        <Self_Goal_Setting>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Policy_Search> ;
+    ns2:IsDetermining <Scheduling> .
+
+<Risk_Monitoring> a <Opportunity>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Risk_Prevention> ;
+    <IsSolvedBy> <Accuracy>,
+        <Aggregated_Data_Architectural_Pattern>,
+        <Centralized_Analytics_Architectural_Pattern>,
+        <Confusion_Matrix>,
+        <Precision>,
+        <Recall>,
+        <Rule_based_Algorithm>,
+        <Visualization> ;
+    <Is_part_of> <Risk_Management> ;
+    ns2:BelongsTo <Risk_Assessment> .
+
+<Risk_Resolution> a <Opportunity>,
+        owl:NamedIndividual ;
+    <IsSolvedBy> <Recommendations> ;
+    <Is_part_of> <Risk_Management> ;
+    ns2:BelongsTo <Risk_Assessment> .
+
+<Robotic_Packaging> a <Opportunity>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Production> .
+
+<Root_Mean_Squared_Error> a <Regression_Metrics>,
+        owl:NamedIndividual .
+
+<Rotation_based_method> a <Communication>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Embeddings> .
+
+<SARSA> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Exploitation>,
+        <Exploration> .
+
+<Self_Learning> a <Learning_Algorithm>,
+        owl:NamedIndividual .
+
+<Self_Play_Algorithm> a <Control>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Reinforcement_Learning> ;
+    ns2:IsDetermining <Multi_Agent_Learning> .
+
+<Semantic_Annotation> a <Data_Enhancement>,
+        <Information_Extraction>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Create_Named_Entities> .
+
+<Sensor_Provider> a <Roles>,
+        owl:NamedIndividual .
+
+<Sequence_Labelling> a <Data_Processing_Task>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Question_Answering> .
+
+<Sequential_Decision_Making> a <Act>,
+        owl:NamedIndividual .
+
+<ServerSide_Model_Deployment> a <Model_Deployment>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Centralized_Analytics_Architectural_Pattern> .
+
+<Sharding> a <Data_Replication>,
+        owl:NamedIndividual .
+
+<Sigmoid> a [ a owl:Restriction ;
+            owl:onProperty <type_of_activation_function> ;
+            owl:someValuesFrom xsd:string ],
+        owl:NamedIndividual .
+
+<Singular_Value_Decomposition> a <Geometry>,
+        owl:NamedIndividual .
+
+<Skip_Gram_Model> a <Natural_Language_Processing>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Word2Vec> .
+
+<Small_Dataset> a owl:Class ;
+    rdfs:subClassOf <Collection> ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( <Collection> [ a owl:Restriction ;
+                        owl:onProperty <volume> ;
+                        owl:someValuesFrom [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:integer ;
+                                owl:withRestrictions ( [ xsd:maxInclusive 100 ] ) ] ] ) ] .
+
+<Software> a owl:Class ;
+    rdfs:subClassOf <Edge>,
+        <Enterprise>,
+        <Fog>,
+        <Platform> .
+
+<Spatial> a <Data_Organization>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Syntactic_Data_Fusion> .
+
+<Spatiotemporal> a <Data_Type>,
+        owl:NamedIndividual .
+
+<Spectral_Embeddings> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_a> <Embeddings> ;
+    <Is_implementing> <Nonlinear_Dimensionality_Reduction> .
+
+<Speech_Recognition> a <Natural_Language_Processing>,
+        <Solution>,
+        owl:NamedIndividual .
+
+<State_Calculation> a <Selection>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Policy_Search> .
+
+<Statistical_Learning> a owl:Class ;
+    rdfs:subClassOf <Approach> .
+
+<Stemming> a <Data_Transformation>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Text_Processing> .
+
+<Store_Text_Data> a <Data_Corpus_Creation>,
+        owl:NamedIndividual .
+
+<Support_Vector_Machine> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Classification_binary>,
+        <Classification_binary_imbalanced> .
+
+<Temporal> a <Data_Organization>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Syntactic_Data_Fusion> .
+
+<Time_Series> a <Data_Type>,
+        owl:NamedIndividual .
+
+<Tokenization> a <Data_Transformation>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Text_Processing> .
+
+<Tools> a owl:Class ;
+    rdfs:subClassOf <Data_Management> .
+
+<Traffic_Light_Signaling> a <Act>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Risk_Detection> ;
+    ns2:RunsOn <Edge> .
+
+<Transcription> a <Solution>,
+        owl:NamedIndividual .
+
+<Transfer_Learning> a <Learning_Algorithm>,
+        owl:NamedIndividual ;
+    <Is_a> <Decentralized_Analytics_Architectural_Pattern> ;
+    <Is_implementing> <BERT>,
+        <Google_Universal_Sentence_Encoder> .
+
+<Transformer> a <Neural_Networks>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Create_Entity_Relationships> .
+
+<Translation> a <Solution>,
+        owl:NamedIndividual .
+
+<Translational_method> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Embeddings> .
+
+<Triple_Store> a <Data_Organization>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Graph>,
+        <Syntactic_Data_Fusion> .
+
+<Unsupervised_Learning> a <Learning_Algorithm>,
+        owl:NamedIndividual ;
+    <Is_implementing> <TabNet> .
+
+<User_Acceptance> a owl:Class ;
+    rdfs:subClassOf <Validation> .
+
+<User_Interface> a <Communication>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Smart_HomeCare_Assistant> .
+
+<User_Management> a <Control>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Data_Sharing> .
+
+<Vector> a <Data_Transformation>,
+        owl:NamedIndividual .
+
+<Video> a <Data_Type>,
+        <Unstructured_Dataset>,
+        owl:NamedIndividual .
+
+<View_Handler> a <Management>,
+        owl:NamedIndividual .
+
+<Vocabulary> a <Data_Formatting>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Bag_of_Words> .
+
+<Walked_based_method> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Embeddings> .
+
+<Whole_Part> a <Structural_Decomposition>,
+        owl:NamedIndividual .
+
+<Word_Index> a <Data_Organization>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Syntactic_Data_Fusion> ;
+    <Is_part_of> <Bag_of_Words> .
+
+<Workflow> a <Organization_of_Work>,
+        owl:NamedIndividual .
+
+<access> a owl:DatatypeProperty ;
+    rdfs:domain <Data_Availability> ;
+    rdfs:range xsd:string .
+
+<accessibility> a owl:DatatypeProperty ;
+    rdfs:domain <Collection> ;
+    rdfs:range xsd:string .
+
+<accuracy> a owl:DatatypeProperty ;
+    rdfs:domain <Regression_Metrics> ;
+    rdfs:range xsd:float .
+
+<advantages> a owl:DatatypeProperty ;
+    rdfs:domain <3_System>,
+        <5_Technology> ;
+    rdfs:range xsd:string .
+
+<approach> a owl:DatatypeProperty ;
+    rdfs:domain <Model> ;
+    rdfs:range xsd:string .
+
+<attributes> a owl:AnnotationProperty .
+
+<batch_size> a owl:DatatypeProperty ;
+    rdfs:domain <Training> ;
+    rdfs:range xsd:integer .
+
+<channel_connectivity_pattern_between_layers> a owl:DatatypeProperty ;
+    rdfs:domain <Neural_Networks> ;
+    rdfs:range xsd:string .
+
+<communication_protocol> a owl:DatatypeProperty ;
+    rdfs:range xsd:string .
+
+<complexity_level> a owl:DatatypeProperty ;
+    rdfs:domain <Opportunity> ;
+    rdfs:range xsd:string .
+
+<constraints> a owl:DatatypeProperty ;
+    rdfs:range xsd:string .
+
+<consumer> a owl:DatatypeProperty ;
+    rdfs:domain <Service> ;
+    rdfs:range xsd:string .
+
+<data_organization> a owl:DatatypeProperty ;
+    rdfs:domain <Governance> ;
+    rdfs:range xsd:string .
+
+<degree> a owl:DatatypeProperty ;
+    rdfs:domain <Data_Redundancy>,
+        <Heterogeneity>,
+        <Human_Dependency_Resolution>,
+        <Quality> ;
+    rdfs:range xsd:string .
+
+<description> a owl:DatatypeProperty ;
+    rdfs:domain <3_System>,
+        <5_Technology>,
+        <Opportunity>,
+        <Product>,
+        <Self_Goal_Setting>,
+        <Self_Governance_Definition>,
+        <Self_Process_Definition>,
+        <Solution>,
+        <Task> ;
+    rdfs:range xsd:string .
+
+<determinism> a owl:DatatypeProperty ;
+    rdfs:domain <Solution> ;
+    rdfs:range xsd:string .
+
+<disadvantages> a owl:DatatypeProperty ;
+    rdfs:domain <3_System>,
+        <5_Technology> ;
+    rdfs:range xsd:string .
+
+<effect> a owl:DatatypeProperty ;
+    rdfs:range xsd:string .
+
+<environment> a owl:DatatypeProperty ;
+    rdfs:domain <Setup> ;
+    rdfs:range xsd:string .
+
+<epochs> a owl:DatatypeProperty ;
+    rdfs:domain <Training> ;
+    rdfs:range xsd:integer .
+
+<error_rate> a owl:DatatypeProperty ;
+    rdfs:domain <Clustering_Metrics> ;
+    rdfs:range xsd:integer .
+
+<f1_score> a owl:DatatypeProperty ;
+    rdfs:domain <Classification_Metrics> ;
+    rdfs:range xsd:float .
+
+<features> a owl:DatatypeProperty ;
+    rdfs:domain <Training> ;
+    rdfs:range xsd:string .
+
+<filter_size_per_layer> a owl:DatatypeProperty ;
+    rdfs:domain <Neural_Networks> ;
+    rdfs:range xsd:integer .
+
+<frequency> a owl:DatatypeProperty ;
+    rdfs:domain <Collection> ;
+    rdfs:range xsd:string .
+
+<goal> a owl:DatatypeProperty ;
+    rdfs:domain <Setup> ;
+    rdfs:range xsd:string .
+
+ns1:axiom a owl:AnnotationProperty ;
+    rdfs:subPropertyOf ns1:testCase .
+
+ns1:type a owl:AnnotationProperty ;
+    rdfs:subPropertyOf ns1:testCase .
+
+<http://www.semanticweb.org/danielburkhardt/ontologies/2021/1/untitled-ontology-10> a owl:Ontology ;
+    ns1:testCase [ ns1:axiom "Neural_Networks SubClassOf Deep_Learning"^^xsd:string ;
+            ns1:type true ],
+        [ ns1:axiom "Solution SubClassOf IsDetermining some Opportunity"^^xsd:string ;
+            ns1:type true ],
+        [ ns1:axiom "Opportunity SubClassOf Is_part_of some Area"^^xsd:string ;
+            ns1:type true ] .
+
+ns2:ConnectsTo a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+ns2:IsBuiltOf a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+<instance_provider> a owl:DatatypeProperty ;
+    rdfs:domain <Service> ;
+    rdfs:range xsd:string .
+
+<isTrue> a owl:DatatypeProperty ;
+    rdfs:domain <Acting>,
+        <Environment_Interaction>,
+        <Heterogeneity>,
+        <Human_Machine_Interaction>,
+        <Information_and_Knowledge_Processing>,
+        <Machine_to_Machine_Interaction>,
+        <Reinforcement>,
+        <Self_Goal_Setting>,
+        <Self_Governance_Definition>,
+        <Self_Process_Definition>,
+        <Self_Selection>,
+        <Sensing> ;
+    rdfs:range xsd:boolean .
+
+<labels> a owl:DatatypeProperty ;
+    rdfs:domain <Training> ;
+    rdfs:range xsd:string .
+
+<language> a owl:DatatypeProperty ;
+    rdfs:domain <Setup> ;
+    rdfs:range xsd:string .
+
+<latency> a owl:DatatypeProperty ;
+    rdfs:domain <Performance> ;
+    rdfs:range xsd:integer ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<learning_rate> a owl:DatatypeProperty ;
+    rdfs:domain <Training> ;
+    rdfs:range xsd:integer .
+
+<learning_technique> a owl:DatatypeProperty ;
+    rdfs:range xsd:string .
+
+<library> a owl:DatatypeProperty ;
+    rdfs:domain <Setup> ;
+    rdfs:range xsd:string .
+
+<logics> a owl:DatatypeProperty ;
+    rdfs:domain <Application> ;
+    rdfs:range xsd:string .
+
+<mean_absolute_error> a owl:DatatypeProperty ;
+    rdfs:domain <Regression_Metrics> ;
+    rdfs:range xsd:float .
+
+<mean_squared_error> a owl:DatatypeProperty ;
+    rdfs:domain <Regression_Metrics> ;
+    rdfs:range xsd:float .
+
+<model_visual> a owl:DatatypeProperty ;
+    rdfs:domain <3_System>,
+        <5_Technology> ;
+    rdfs:range xsd:long .
+
+<modeling_technique> a owl:DatatypeProperty ;
+    rdfs:domain <Setup> ;
+    rdfs:range [ a rdfs:Datatype ;
+            owl:oneOf [ a rdf:List ;
+                    rdf:first "data-driven approach" ;
+                    rdf:rest [ a rdf:List ;
+                            rdf:first "hybrid approach" ;
+                            rdf:rest [ a rdf:List ;
+                                    rdf:first "physical approach" ;
+                                    rdf:rest () ] ] ] ] .
+
+<name> a owl:DatatypeProperty ;
+    rdfs:domain <Interfaces>,
+        <Opportunity>,
+        <Responsibilities>,
+        <Solution>,
+        <Task> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<node> a owl:DatatypeProperty ;
+    rdfs:domain <Service> ;
+    rdfs:range xsd:string .
+
+<node_provider> a owl:DatatypeProperty ;
+    rdfs:domain <Service> ;
+    rdfs:range xsd:string .
+
+<number_of_channels_per_layer> a owl:DatatypeProperty ;
+    rdfs:domain <Neural_Networks> ;
+    rdfs:range xsd:integer .
+
+<number_of_convolutional_layers> a owl:DatatypeProperty ;
+    rdfs:domain <Neural_Networks> ;
+    rdfs:range xsd:integer .
+
+<number_of_layers> a owl:DatatypeProperty ;
+    rdfs:domain <Neural_Networks> ;
+    rdfs:range xsd:integer .
+
+<number_of_neurons_per_layer> a owl:DatatypeProperty ;
+    rdfs:domain <Neural_Networks> ;
+    rdfs:range xsd:integer .
+
+<number_of_pooling_layers> a owl:DatatypeProperty ;
+    rdfs:domain <Neural_Networks> ;
+    rdfs:range xsd:integer .
+
+<ordering_of_pooling> a owl:DatatypeProperty ;
+    rdfs:domain <Neural_Networks> ;
+    rdfs:range xsd:string .
+
+<output_type> a owl:DatatypeProperty ;
+    rdfs:domain <Deployment> ;
+    rdfs:range xsd:string .
+
+<parameter_amount> a owl:DatatypeProperty ;
+    rdfs:domain <Model> ;
+    rdfs:range xsd:integer .
+
+<precision> a owl:DatatypeProperty ;
+    rdfs:domain <Classification_Metrics> ;
+    rdfs:range xsd:float .
+
+<price> a owl:DatatypeProperty ;
+    rdfs:domain <Product> ;
+    rdfs:range xsd:decimal .
+
+<provider> a owl:DatatypeProperty ;
+    rdfs:domain <Service> ;
+    rdfs:range xsd:string .
+
+<quantity> a owl:DatatypeProperty ;
+    rdfs:domain <4_Data> ;
+    rdfs:range xsd:string .
+
+<r2_score> a owl:DatatypeProperty ;
+    rdfs:domain <Regression_Metrics> ;
+    rdfs:range xsd:float .
+
+<recall> a owl:DatatypeProperty ;
+    rdfs:domain <Classification_Metrics> ;
+    rdfs:range xsd:float .
+
+<root_mean_squared_error> a owl:DatatypeProperty ;
+    rdfs:domain <Regression_Metrics> ;
+    rdfs:range xsd:float .
+
+<rules> a owl:DatatypeProperty ;
+    rdfs:domain <Application> ;
+    rdfs:range xsd:string .
+
+<size_of_pooling_regions> a owl:DatatypeProperty ;
+    rdfs:domain <Neural_Networks> ;
+    rdfs:range xsd:integer .
+
+<stride_per_layer> a owl:DatatypeProperty ;
+    rdfs:domain <Neural_Networks> ;
+    rdfs:range xsd:integer .
+
+<structure> a owl:DatatypeProperty ;
+    rdfs:domain <4_Data>,
+        <Model>,
+        <Testing>,
+        <Training> ;
+    rdfs:range xsd:string .
+
+<t-SNE> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Nonlinear_Dimensionality_Reduction> .
+
+<task> a owl:DatatypeProperty ;
+    rdfs:domain <Setup> ;
+    rdfs:range xsd:string .
+
+<time_dependency> a owl:DatatypeProperty ;
+    rdfs:domain <Interaction> ;
+    rdfs:range xsd:integer .
+
+<tool> a owl:DatatypeProperty ;
+    rdfs:domain <Processing> ;
+    rdfs:range xsd:string .
+
+<triggers> a owl:DatatypeProperty ;
+    rdfs:range xsd:string .
+
+<type> a owl:DatatypeProperty ;
+    rdfs:domain <Communication_Structure>,
+        <Data_Management>,
+        <Decision_Structure>,
+        <Deployment>,
+        <Edge>,
+        <Enterprise>,
+        <Governance>,
+        <Platform>,
+        <Task>,
+        <Testing>,
+        <Training> ;
+    rdfs:range xsd:string .
+
+<type_of_optimization_function> a owl:DatatypeProperty ;
+    rdfs:domain <Neural_Networks> ;
+    rdfs:range xsd:string .
+
+<type_of_pooling_operator_per_layer> a owl:DatatypeProperty ;
+    rdfs:domain <Neural_Networks> ;
+    rdfs:range xsd:string .
+
+<user_interface> a owl:DatatypeProperty ;
+    rdfs:domain <Application> ;
+    rdfs:range xsd:string .
+
+<Accuracy> a <Classification_Metrics>,
+        owl:NamedIndividual .
+
+<AlphaStar> a <Opportunity>,
+        owl:NamedIndividual ;
+    <IsSolvedBy> <Aggregated_Data_Architectural_Pattern>,
+        <Centralized_Analytics_Architectural_Pattern>,
+        <Model-based_Planning>,
+        <ReplayDataset> ;
+    <Is_part_of> <GamePlay> .
+
+<Analytic> a owl:Class ;
+    rdfs:subClassOf <5_Technology> .
+
+<Asset_Management> a <Control>,
+        owl:NamedIndividual .
+
+<BERT> a <Natural_Language_Processing>,
+        owl:NamedIndividual ;
+    <volume> 1000 .
+
+<Bayesian_Optimization> a <Hyperparameter_Setting>,
+        owl:NamedIndividual .
+
+<Candidate_Generation> a <Selection>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Recommendations> .
+
+<Classification_multiclass_bagging> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Classification> .
+
+<Classification_multilabel_bagging> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Classification> .
+
+<Clustering_Metrics> a owl:Class ;
+    rdfs:subClassOf <Evaluation_Metrics> .
+
+<Clustering_linear> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Clustering> .
+
+<Co_Reference_Resolution> a <Information_Extraction>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Entity_Linking> .
+
+<Confusion_Matrix> a <Classification_Metrics>,
+        owl:NamedIndividual .
+
+<Contact_Lense_Application> a <Application>,
+        owl:NamedIndividual .
+
+<Contact_lenses> a <Product>,
+        owl:NamedIndividual .
+
+<Convolutional_NN> a <Neural_Networks>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Policy_Network>,
+        <Value_Network> ;
+    <Is_part_of> <Classification_nonlinear>,
+        <Data_Processing_nonlinear>,
+        <Supervised_Learning> ;
+    <Requires> <GPU>,
+        <TPU> .
+
+<Crawl_Text_Data> a <Data_Corpus_Creation>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Recommendations> .
+
+<Create_Vector_Space> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Create_Named_Entities> ;
+    <Requires> <Graph_Embeddings>,
+        <Sentence_Embeddings>,
+        <Word_Embeddings> .
+
+<DataAsAService> a <Data_Sharing>,
+        owl:NamedIndividual .
+
+<Data_Analyst> a <Roles>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Data_Science> .
+
+<Data_Availability> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_defined_by> ;
+            owl:someValuesFrom <Collection> ],
+        <Data_and_Process_Management> .
+
+<Data_Formatting> a owl:Class ;
+    rdfs:subClassOf <Processing> .
+
+<Data_Heterogeneity_Dissolve> a <Opportunity>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Digital_Prescription>,
+        <Online_Healthcare_Consultation>,
+        <Smart_HomeCare_Assistant>,
+        <Smart_Home_Care> ;
+    <IsSolvedBy> <Semantic_Data_Fusion>,
+        <Syntactic_Data_Fusion> ;
+    <Is_part_of> <Healthcare> .
+
+<Data_Pipeline_Batch> a <Data_Pipeline>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Batch>,
+        <Three_Tier> .
+
+<Data_Processing_linear> a <Data_Processing_Task>,
+        owl:NamedIndividual .
+
+<Data_Protection> a owl:Class ;
+    rdfs:subClassOf <Governance> .
+
+<Data_Redundancy> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_defined_by> ;
+            owl:someValuesFrom <Data_Management> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_part_of> ;
+            owl:someValuesFrom <Data_Sharing> ],
+        <Data_and_Process_Management> .
+
+<Data_Scientist> a <Roles>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Data_Science> .
+
+<Databus> a <Data_Sharing>,
+        owl:NamedIndividual .
+
+<Decision_Structure> a owl:Class ;
+    rdfs:subClassOf <Organization> .
+
+<Deep_Learning> a owl:Class ;
+    rdfs:subClassOf <Approach> .
+
+<Demonstrations> a <Large_Dataset>,
+        owl:NamedIndividual .
+
+<Dependency_of_People_on_Cars> a <Service>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Mobility_Behavior_Application> .
+
+<Distributed_Data_Architectural_Pattern> a <Data_Storage>,
+        owl:NamedIndividual .
+
+<Domain_Expert> a <Roles>,
+        owl:NamedIndividual .
+
+<Feature_Engineering> a <Data_Processing_Task>,
+        <Data_Transformation>,
+        owl:NamedIndividual .
+
+<Feed_Forward_NN> a <Neural_Networks>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Classification_nonlinear>,
+        <Non_Linear_Regression>,
+        <Supervised_Learning>,
+        <Word2Vec> .
+
+<GPU> a <Computing_Units>,
+        owl:NamedIndividual .
+
+<GamePlay> a <Area>,
+        owl:NamedIndividual .
+
+<Google_Universal_Sentence_Encoder> a <Natural_Language_Processing>,
+        owl:NamedIndividual .
+
+<Gradient_Descent> a <Optimization_Algorithm>,
+        owl:NamedIndividual .
+
+<Graph> a <Visualization>,
+        owl:NamedIndividual .
+
+<Graph_Embeddings> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_a> <Embeddings> ;
+    <Is_part_of> <Data_Augmentation>,
+        <Recommendations> .
+
+<Graph_based_Database> a <Storage>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Ranking>,
+        <Similarity> ;
+    <Requires> <Triple_Creation> .
+
+<Image_Generation> a <Solution>,
+        owl:NamedIndividual .
+
+<Interfaces> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_part_of> ;
+            owl:someValuesFrom <Data_Integration> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_part_of> ;
+            owl:someValuesFrom <Communication> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_part_of> ;
+            owl:someValuesFrom <Data_Interaction> ],
+        <5_Technology> .
+
+<Logistic_Regression> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Regression> .
+
+<Long_Short_Term_Memory> a <Neural_Networks>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Sequence_Operations_over_Time> .
+
+<Medication_Suspender> a <Opportunity>,
+        owl:NamedIndividual ;
+    <IsSolvedBy> <Classification>,
+        <Image_Recognition>,
+        <Object_Detection>,
+        <Sense>,
+        <Visual_Scene_Understanding> ;
+    <Is_part_of> <Healthcare> ;
+    ns2:BelongsTo <Smart_HomeCare_Assistant> .
+
+<Multimodal_Travel_Behavior> a <Service>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Mobility_Behavior_Application> .
+
+<Natural_Language_Understanding> a <Natural_Language_Processing>,
+        <Solution>,
+        owl:NamedIndividual .
+
+<Neural_Network_Architecture_Design> a <Solution>,
+        owl:NamedIndividual .
+
+<Neural_Network_Search> a <Optimization_Algorithm>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Neural_Network_Architecture_Design> .
+
+<Non_Linear_Regression> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Regression> .
+
+<Out_of_Vocabulary_Resolution> a <Information_Extraction>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Create_Named_Entities> .
+
+<Parallel_Computation> a owl:Class ;
+    rdfs:subClassOf <5_Technology> ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Deployment> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Processing> ],
+        [ a owl:Class ;
+            owl:intersectionOf ( <Testing> <Validation> [ a owl:Restriction ;
+                        owl:onProperty <Is_implementing> ;
+                        owl:someValuesFrom <Training> ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty <Requires> ;
+            owl:someValuesFrom <Engineering_Storage_and_Computing> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Collection> ] .
+
+<Platform_Engineer> a <Roles>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Data_Science> .
+
+<Policy_Network> a <Neural_Networks>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Classification> ;
+    <Is_part_of> <Monte_Carlo_Tree_Search> ;
+    <Requires> <Gradient_Descent>,
+        <Images>,
+        <Reinforcement_Learning>,
+        <Softmax>,
+        <Supervised_Learning> .
+
+<Precision> a <Classification_Metrics>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Classification_multilabel>,
+        <Classification_nonlinear> .
+
+<Process_Optimization> a <Opportunity>,
+        owl:NamedIndividual ;
+    <IsSolvedBy> <Anomaly_Detection>,
+        <Classification>,
+        <Clustering>,
+        <Process_Prediction>,
+        <Recommendations>,
+        <Regression>,
+        <Sense> ;
+    <Is_part_of> <Mobility>,
+        <Production>,
+        <Risk_Management> ;
+    ns2:BelongsTo <Dependency_of_People_on_Cars>,
+        <Multimodal_Travel_Behavior>,
+        <Risk_Assessment> .
+
+<Process_Prediction> a <Solution>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Simulation> .
+
+<Q-Learning> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Semi_Markov_Decision_Process> ;
+    <Is_part_of> <Exploitation>,
+        <Exploration> .
+
+<Quality> a owl:Class ;
+    rdfs:subClassOf <Interaction> .
+
+<Ranking> a <Selection>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Policy_Search>,
+        <Recommendations> .
+
+<Recall> a <Classification_Metrics>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Classification_multilabel>,
+        <Classification_nonlinear> .
+
+<ReplayDataset> a <Large_Dataset>,
+        owl:NamedIndividual .
+
+<Resource_Handling> a owl:Class ;
+    rdfs:subClassOf <5_Technology> .
+
+<RiskDataset> a <Large_Dataset>,
+        owl:NamedIndividual .
+
+<Rule_based_Algorithm> a <Control>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Rules> .
+
+<Rules> a <Acting>,
+        <Control>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Drug_Home_Delivery> .
+
+<Schedule_Formulation> a owl:Class ;
+    rdfs:subClassOf <Self-Organization> .
+
+<Scheduling> a <Control_Task>,
+        <Organization_of_Work>,
+        <Schedule_Formulation>,
+        owl:NamedIndividual .
+
+<Self_Selection> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <4_Data> ],
+        <Self-Organization> .
+
+<Semi_Markov_Decision_Process> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Policy_Search> .
+
+<Sentence_Embeddings> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_a> <Embeddings> .
+
+<Shared_Memory> a <Data_Sharing>,
+        owl:NamedIndividual .
+
+<Softmax> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Array> ;
+    <type_of_activation_function> "" .
+
+<Speech_Query_Detection> a <Information_Extraction>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Question_Answering> .
+
+<Strategy_Selection> a <Selection>,
+        owl:NamedIndividual .
+
+<Structural_Decomposition> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <System_Decomposition> ],
+        <5_Technology> .
+
+<System_Engineer> a <Roles>,
+        owl:NamedIndividual .
+
+<TPU> a <Computing_Units>,
+        owl:NamedIndividual .
+
+<Tabular_Feature_Learning> a <Data_Processing_Task>,
+        owl:NamedIndividual .
+
+<Text> a <Data_Type>,
+        <Unstructured_Dataset>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Crawl_Text_Data>,
+        <Create_Entity_Label>,
+        <Create_Entity_Relationships>,
+        <Create_Named_Entities> .
+
+<Text_Representation_Extraction> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Natural_Language_Understanding> .
+
+<Value_Network> a <Neural_Networks>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Regression> ;
+    <Is_part_of> <Monte_Carlo_Tree_Search> ;
+    <Requires> <Images>,
+        <Reinforcement_Learning>,
+        <Supervised_Learning> .
+
+<Word_Embeddings> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_a> <Embeddings> .
+
+<completeness> a owl:DatatypeProperty ;
+    rdfs:domain <Collection> ;
+    rdfs:range xsd:boolean .
+
+<consistency> a owl:DatatypeProperty ;
+    rdfs:domain <Collection> ;
+    rdfs:range xsd:boolean .
+
+ns2:ExecutionOf a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:subPropertyOf ns2:CallsForExecution .
+
+<type_of_activation_function> a owl:DatatypeProperty ;
+    rdfs:domain <Neural_Networks> ;
+    rdfs:range xsd:string .
+
+<Array> a <Data_Representation_Modelling>,
+        owl:NamedIndividual .
+
+<Bag_of_Words> a <Natural_Language_Processing>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Array> .
+
+<Classification_binary_imbalanced> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Classification> .
+
+<Classification_multiclass_boost> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Classification> .
+
+<Classification_multilabel_boost> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Classification> .
+
+<Compression> a <Solution>,
+        owl:NamedIndividual .
+
+<Continuous_Learning> a <Learning_Algorithm>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Continuous_Learning> .
+
+<Data_Enhancement> a owl:Class ;
+    rdfs:subClassOf <Processing> .
+
+<Data_Mapping> a owl:Class ;
+    rdfs:subClassOf <Processing> .
+
+<Data_Pipeline_Stream> a <Data_Pipeline>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Streaming>,
+        <Three_Tier> .
+
+<Data_Processing_nonlinear> a <Data_Processing_Task>,
+        owl:NamedIndividual .
+
+<Dataflow> a owl:Class ;
+    rdfs:subClassOf <5_Technology> .
+
+<Digital_Prescription> a <Service>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Healthcare_Assistant_Application> .
+
+<Drug_Delivery> a <Service>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Healthcare_Assistant_Application> .
+
+<Entity_Linking> a <Information_Extraction>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Question_Answering>,
+        <Recommendations> .
+
+<Fog> a owl:Class ;
+    rdfs:subClassOf <Engineering_Storage_and_Computing> .
+
+<Heterogeneity> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_defined_by> ;
+            owl:someValuesFrom <Collection> ],
+        <Data_and_Process_Management> .
+
+<Human_Dependency_Resolution> a owl:Class ;
+    rdfs:subClassOf <Self-Determination> .
+
+<Images> a <Data_Type>,
+        <Unstructured_Dataset>,
+        owl:NamedIndividual .
+
+<Interactive_Architectural_Patterns> a owl:Class ;
+    rdfs:subClassOf <System_Decomposition> .
+
+<Lambda> a <Data_Pipeline>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Batch> .
+
+<Machine_to_Machine_Interaction> a owl:Class ;
+    rdfs:subClassOf <Interaction> .
+
+<Management> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Control> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Data_Management> ],
+        <5_Technology> .
+
+<Mobility> a <Area>,
+        owl:NamedIndividual .
+
+<Model_Deployment> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Deployment> ],
+        <5_Technology> .
+
+<Online_Healthcare_Consultation> a <Service>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Healthcare_Assistant_Application> .
+
+<Responsibilities> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_part_of> ;
+            owl:someValuesFrom <Task> ],
+        <Organization> .
+
+<Risk_Detection> a <Opportunity>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Risk_Prevention> ;
+    <IsSolvedBy> <Anomaly_Detection>,
+        <Asset_Management>,
+        <Classification>,
+        <Clustering>,
+        <Data_Augmentation>,
+        <Decentralized_Analytics_Architectural_Pattern>,
+        <Decentralized_Data_Architectural_Pattern>,
+        <Image_Recognition>,
+        <Neural_Network_Search>,
+        <Sense>,
+        <Visual_Scene_Understanding> ;
+    <Is_part_of> <Risk_Management> ;
+    ns2:BelongsTo <Risk_Assessment> .
+
+<Risk_Prevention> a <Human_Dependency_Resolution>,
+        <Opportunity>,
+        owl:NamedIndividual ;
+    <IsSolvedBy> <Aggregated_Data_Architectural_Pattern>,
+        <Centralized_Analytics_Architectural_Pattern>,
+        <Model-based_Planning>,
+        <Recommendations>,
+        <RiskDataset>,
+        <Simulation> ;
+    <Is_part_of> <Risk_Management> ;
+    ns2:BelongsTo <Risk_Assessment> .
+
+<Self_Process_Definition> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <4_Data> ],
+        <Self-Determination> .
+
+<Semantic_Data_Fusion> a <Solution>,
+        owl:NamedIndividual .
+
+<Sensing> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Collection> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_part_of> ;
+            owl:someValuesFrom <Environment_Interaction> ],
+        <5_Technology> .
+
+<Smart_Home_Care> a <Service>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Healthcare_Assistant_Application> .
+
+<TabNet> a <Neural_Networks>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Tabular_Feature_Learning> .
+
+<Visual_Scene_Understanding> a <Solution>,
+        owl:NamedIndividual .
+
+<dimensionality> a owl:DatatypeProperty ;
+    rdfs:domain <Collection> ;
+    rdfs:range xsd:boolean .
+
+ns1:testCase a owl:AnnotationProperty .
+
+ns2:CallsForExecution a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+<Acting> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_part_of> ;
+            owl:someValuesFrom <Environment_Interaction> ],
+        <5_Technology> .
+
+<Anomaly_Detection> a <Solution>,
+        owl:NamedIndividual .
+
+<Batch> a <Data_Integration>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Continuous_Learning>,
+        <Recommendations>,
+        <Streaming> .
+
+<Data_Processing> a <Service>,
+        owl:Class,
+        owl:NamedIndividual ;
+    <Is_part_of> <Risk_Management_Application> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Data_Processing_Task> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Requires> ;
+            owl:someValuesFrom <Collection> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Requires> ;
+            owl:someValuesFrom <Data_Integration> ],
+        <3_System> .
+
+<Decentralized_Data_Architectural_Pattern> a <Data_Storage>,
+        owl:NamedIndividual ;
+    owl:sameAs <Distributed_Data_Architectural_Pattern> .
+
+<Dimensionality_Reduction> a <Data_Processing_Task>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Compression> .
+
+<Distributed_Architectural_Patterns> a owl:Class ;
+    rdfs:subClassOf <System_Decomposition> .
+
+<Drug_Home_Delivery> a <Opportunity>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Smart_HomeCare_Assistant> ;
+    <Is_part_of> <Healthcare> ;
+    ns2:BelongsTo <Drug_Delivery> .
+
+<Enterprise> a <Storage>,
+        owl:Class,
+        owl:NamedIndividual ;
+    <Is_a> <Layers> ;
+    <Is_implementing> <Risk_Management_Application> ;
+    rdfs:subClassOf <Engineering_Storage_and_Computing> .
+
+<Explainability> a owl:Class ;
+    rdfs:subClassOf <Setup> .
+
+<Feature_Extraction> a <Data_Processing_Task>,
+        owl:Class,
+        owl:NamedIndividual ;
+    rdfs:subClassOf <Collection> .
+
+<Geometry> a owl:Class ;
+    rdfs:subClassOf <Approach> .
+
+<Identity_Management> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Control_Task> ],
+        <4_Data> .
+
+<IsAppliedIn> a owl:FunctionalProperty,
+        owl:ObjectProperty .
+
+<Is_defined_by> a owl:ObjectProperty ;
+    rdfs:subPropertyOf ns2:BelongsTo .
+
+<Large_Dataset> a owl:Class ;
+    rdfs:subClassOf <Collection> ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( <Collection> [ a owl:Restriction ;
+                        owl:onProperty <volume> ;
+                        owl:someValuesFrom [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:integer ;
+                                owl:withRestrictions ( [ xsd:minInclusive 1000 ] ) ] ] ) ] .
+
+<Layers> a <Mud_to_Structure_Architectural_Patterns>,
+        owl:NamedIndividual .
+
+<Mobility_Behavior_Application> a <Application>,
+        owl:NamedIndividual .
+
+<Mud_to_Structure_Architectural_Patterns> a owl:Class ;
+    rdfs:subClassOf <System_Decomposition> .
+
+<Organization_of_Work> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Control> ],
+        <5_Technology> .
+
+<Self_Goal_Setting> a owl:Class ;
+    rdfs:subClassOf <Self-Determination> .
+
+<Self_Governance_Definition> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Governance> ],
+        <Self-Determination> .
+
+<Sense> a <Control>,
+        <Data_Corpus_Creation>,
+        <Environment_Interaction>,
+        <Sensing>,
+        owl:NamedIndividual ;
+    ns2:RunsOn <Edge> .
+
+<Simulation> a <Solution>,
+        owl:NamedIndividual .
+
+<Streaming> a <Data_Integration>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Recommendations> .
+
+<Three_Tier> a <Data_Provision>,
+        owl:NamedIndividual ;
+    <Is_a> <Decentralized_Data_Architectural_Pattern> .
+
+<Timber_Industry> a <Area>,
+        owl:NamedIndividual .
+
+<Triple_Creation> a <Data_Processing_Task>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Text_Processing> .
+
+<Word2Vec> a <Natural_Language_Processing>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Create_Vector_Space> ;
+    <volume> 1000 .
+
+ns2:BelongsTo a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+<Access_Control> a owl:Class ;
+    rdfs:subClassOf <5_Technology> .
+
+<Classification_binary> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Classification> .
+
+<Classification_multiclass> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Classification> .
+
+<Classification_multilabel> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Classification> ;
+    owl:sameAs <Create_Entity_Label>,
+        <Create_Entity_Relationships> .
+
+<Classification_nonlinear> a <Data_Representation_Modelling>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Classification> .
+
+<Communication_Structure> a owl:Class ;
+    rdfs:subClassOf <Organization> .
+
+<Create_Entity_Label> a <Information_Extraction>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Create_Named_Entities> .
+
+<Create_Entity_Relationships> a <Information_Extraction>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Create_Named_Entities> .
+
+<Data_Augmentation> a <Data_Processing_Task>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Risk_Detection> .
+
+<Environment_Interaction> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <IsAppliedIn> ;
+            owl:someValuesFrom <Information_and_Knowledge_Processing> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Act> ],
+        <Interaction> .
+
+<Evaluation_Metrics> a owl:Class ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:unionOf ( <Testing> <Validation> [ a owl:Restriction ;
+                        owl:onProperty <IsAppliedIn> ;
+                        owl:someValuesFrom <Training> ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Data_Representation_Modelling> ],
+        <Setup> .
+
+<Exploration> a <Act>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Policy_Search> .
+
+<Human_Machine_Interaction> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Requires> ;
+            owl:someValuesFrom <Communication> ],
+        <Interaction> .
+
+<Hyperparameter_Setting> a owl:Class ;
+    rdfs:subClassOf <Setup> .
+
+<Image_Recognition> a <Solution>,
+        owl:NamedIndividual .
+
+<Inference> a owl:Class ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( <Training> <Validation> [ a owl:Restriction ;
+                        owl:onProperty <Is_part_of> ;
+                        owl:someValuesFrom <Testing> ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:RunsOn ;
+            owl:someValuesFrom <Computing_Units> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_part_of> ;
+            owl:someValuesFrom <Deployment> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Task> ],
+        <5_Technology> .
+
+<Model-based_Planning> a <Solution>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Simulation> .
+
+<Monte_Carlo_Tree_Search> a <Machine_Learning>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Exploitation>,
+        <Policy_Search> .
+
+<Multi_Agent_Learning> a <Learning_Algorithm>,
+        owl:NamedIndividual ;
+    <Is_a> <Reinforcement_Learning> ;
+    <Is_implementing> <Policy_Search> .
+
+<Object_Detection> a <Solution>,
+        owl:NamedIndividual .
+
+<Organization> a owl:Class ;
+    rdfs:subClassOf <2_Autonomization> .
+
+<Performance> a owl:Class ;
+    rdfs:subClassOf <Interaction> .
+
+<Platform> a <Storage>,
+        owl:Class,
+        owl:NamedIndividual ;
+    <Is_a> <Layers> ;
+    <Is_implementing> <Aggregated_Data_Architectural_Pattern>,
+        <Centralized_Analytics_Architectural_Pattern> ;
+    rdfs:subClassOf <Engineering_Storage_and_Computing> .
+
+<Risk_Management_Application> a <Application>,
+        owl:NamedIndividual .
+
+<Self-Determination> a owl:Class ;
+    rdfs:subClassOf <2_Autonomization> .
+
+<Self-Organization> a owl:Class ;
+    rdfs:subClassOf <2_Autonomization> .
+
+<Sequence_Operations_over_Time> a <Act>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Model-based_Planning> .
+
+<Supervised_Learning> a <Learning_Algorithm>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Dimensionality_Reduction> .
+
+<Unstructured_Dataset> a owl:Class ;
+    rdfs:subClassOf <Collection> .
+
+<volume> a owl:DatatypeProperty ;
+    rdfs:domain <Collection> ;
+    rdfs:range xsd:integer .
+
+<2_Autonomization> a owl:Class .
+
+<Aggregated_Data_Architectural_Pattern> a <Data_Storage>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Smart_HomeCare_Assistant> ;
+    <Is_part_of> <Centralized> .
+
+<Approach> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Data_Representation_Modelling> ],
+        <Setup> .
+
+<Centralized> a <Communication_Structure>,
+        <System_Orientation>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Healthcare>,
+        <Mobility> .
+
+<Clustering> a <Solution>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Question_Answering>,
+        <Recommendations> .
+
+<Data_Pipeline> a owl:Class ;
+    rdfs:subClassOf <Data_Provision>,
+        <Engineering_Storage_and_Computing> .
+
+<Data_Replication> a owl:Class ;
+    rdfs:subClassOf <5_Technology> .
+
+<Data_Sharing> a <Opportunity>,
+        owl:Class,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Drug_Home_Delivery>,
+        <Medication_Suspender>,
+        <Smart_HomeCare_Assistant> ;
+    <IsSolvedBy> <DataAsAService>,
+        <Databus>,
+        <Shared_Memory> ;
+    <Is_part_of> <Healthcare> ;
+    ns2:BelongsTo <Digital_Prescription>,
+        <Drug_Delivery>,
+        <Online_Healthcare_Consultation>,
+        <Smart_Home_Care> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Human_Machine_Interaction> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Requires> ;
+            owl:someValuesFrom <Governance> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Requires> ;
+            owl:someValuesFrom <Data_Interaction> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Data_Corpus_Creation> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Requires> ;
+            owl:someValuesFrom <Communication> ],
+        <3_System> .
+
+<Decentralized_Analytics_Architectural_Pattern> a <Analytics_Design>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Smart_HomeCare_Assistant> .
+
+<Edge> a <Storage>,
+        owl:Class,
+        owl:NamedIndividual ;
+    <Is_a> <Layers> ;
+    rdfs:subClassOf <Engineering_Storage_and_Computing> .
+
+<Healthcare_Assistant_Application> a <Application>,
+        owl:NamedIndividual .
+
+<Learning> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Information_and_Knowledge_Processing> ],
+        <Self-Organization>,
+        <Task> .
+
+<Nonlinear_Dimensionality_Reduction> a <Data_Processing_Task>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Compression> .
+
+<Operation> a owl:Class ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( <Control_Task> [ a owl:Restriction ;
+                        owl:onProperty <Is_implementing> ;
+                        owl:someValuesFrom <Act> ] ) ],
+        <3_System> .
+
+<Optimization_Algorithm> a owl:Class ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:unionOf ( <Deployment> [ a owl:Restriction ;
+                        owl:onProperty <IsAppliedIn> ;
+                        owl:someValuesFrom <Training> ] ) ],
+        <Setup> .
+
+<Product> a owl:Class ;
+    rdfs:subClassOf <1_Business> .
+
+<Production> a <Area>,
+        owl:NamedIndividual .
+
+<Question_Answering> a <Solution>,
+        owl:NamedIndividual .
+
+<Reinforcement> a owl:Class ;
+    rdfs:subClassOf <Self-Organization> .
+
+<Risk_Assessment> a <Service>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Timber_Industry> ;
+    <Is_part_of> <Risk_Management_Application> ;
+    ns2:BelongsTo <Risk_Management> .
+
+<Storage_and_Computing> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Data_Storage> ],
+        <5_Technology> .
+
+<has_characterstic> a owl:ObjectProperty .
+
+ns2:RunsOn a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:range <Engineering_Storage_and_Computing> ;
+    rdfs:subPropertyOf ns2:CallsForExecution .
+
+<Centralized_Analytics_Architectural_Pattern> a <Analytics_Design>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Centralized> .
+
+<Control_Task> a owl:Class ;
+    rdfs:subClassOf <Task> .
+
+<Data_Interaction> a owl:Class ;
+    rdfs:subClassOf <5_Technology> .
+
+<Data_Provision> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Human_Machine_Interaction> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Data_Corpus_Creation> ],
+        <3_System> .
+
+<Data_and_Process_Management> a owl:Class ;
+    rdfs:subClassOf <2_Autonomization> .
+
+<Exploitation> a <Act>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Policy_Search> ;
+    <Is_part_of> <Reinforcement_Learning> .
+
+<Model> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Inference> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Data_Representation_Modelling> ],
+        <4_Data> .
+
+<Risk_Management> a <Area>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Timber_Industry> .
+
+<System_Decomposition> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Organization> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Interaction> ],
+        <3_System> .
+
+<System_Orientation> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <5_Technology> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <3_System> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_part_of> ;
+            owl:someValuesFrom <Solution> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <4_Data> ],
+        <1_Business> .
+
+<Testing> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:RunsOn ;
+            owl:someValuesFrom <Computing_Units> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Training> ],
+        <4_Data> .
+
+<Validation> a owl:Class ;
+    rdfs:subClassOf <4_Data> .
+
+<Act> a owl:Class ;
+    rdfs:subClassOf <Interaction>,
+        <Task> .
+
+<Analytics_Design> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Analytic> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Information_Extraction> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Information_and_Knowledge_Processing> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Learning> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <System_Decomposition> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Data_Representation_Modelling> ],
+        <3_System> .
+
+<Regression> a <Solution>,
+        owl:NamedIndividual .
+
+<Similarity> a <Information_Extraction>,
+        <Natural_Language_Processing>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Create_Named_Entities> ;
+    <Is_part_of> <Question_Answering>,
+        <Recommendations>,
+        <Text_Processing> .
+
+<1_Business> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <3_System> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <System_Orientation> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <4_Data> ] .
+
+<Area> a owl:Class ;
+    rdfs:subClassOf <1_Business> .
+
+<Classification_Metrics> a owl:Class ;
+    rdfs:subClassOf <Evaluation_Metrics> ;
+    owl:disjointWith <Regression_Metrics> .
+
+<Computing_Units> a owl:Class ;
+    rdfs:subClassOf <Storage_and_Computing> .
+
+<Data_Corpus_Creation> a owl:Class ;
+    rdfs:subClassOf <Information_and_Knowledge_Processing>,
+        <Task> .
+
+<Data_Type> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Data_Processing_Task> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Data_Integration> ],
+        <4_Data> .
+
+<Deployment> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:RunsOn ;
+            owl:someValuesFrom <Computing_Units> ],
+        <4_Data> .
+
+<Information_and_Knowledge_Processing> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Requires> ;
+            owl:someValuesFrom <Setup> ],
+        [ a owl:Class ;
+            owl:intersectionOf ( <Evaluation_Metrics> [ a owl:Restriction ;
+                        owl:onProperty <Requires> ;
+                        owl:someValuesFrom <Explainability> ] ) ],
+        <Data_and_Process_Management> .
+
+<Interaction> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Requires> ;
+            owl:someValuesFrom <Communication> ],
+        <2_Autonomization> .
+
+<Processing> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Data_Processing_Task> ],
+        <4_Data> .
+
+<Selection> a owl:Class ;
+    rdfs:subClassOf <Task> .
+
+<Smart_HomeCare_Assistant> a <Opportunity>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Smart_HomeCare_Assistant> ;
+    <Is_part_of> <Healthcare> .
+
+<Visualization> a owl:Class,
+        owl:NamedIndividual ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Control_Task> ],
+        <4_Data> .
+
+<Application> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Machine_to_Machine_Interaction> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Human_Machine_Interaction> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_part_of> ;
+            owl:someValuesFrom <Product> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_part_of> ;
+            owl:someValuesFrom <Solution> ],
+        <1_Business> .
+
+<Create_Named_Entities> a <Information_Extraction>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Text_Processing> ;
+    <Is_part_of> <Triple_Creation> .
+
+<Data_Storage> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Requires> ;
+            owl:someValuesFrom <Collection> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Data_Integration> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Data_Corpus_Creation> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <System_Decomposition> ],
+        <3_System> .
+
+<Engineering_Storage_and_Computing> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Collection> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Collection> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Data_Processing_Task> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Resource_Handling> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Storage_and_Computing> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Data_Integration> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Data_Corpus_Creation> ],
+        <4_Data> .
+
+<Healthcare> a <Area>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Drug_Home_Delivery> ;
+    <Requires> <Data_Analyst>,
+        <Data_Scientist>,
+        <Domain_Expert>,
+        <Platform_Engineer>,
+        <System_Engineer> .
+
+<Text_Processing> a <Natural_Language_Processing>,
+        <Solution>,
+        owl:NamedIndividual ;
+    <IsAppliedIn> <Recommendations> ;
+    <Is_implementing> <Create_Named_Entities> ;
+    <Requires> <Text> .
+
+<Governance> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Control_Task> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Requires> ;
+            owl:someValuesFrom <Control> ],
+        <4_Data> .
+
+<NeuralNetwork_Creation> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Data_Representation_Modelling> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Learning> ],
+        <3_System> .
+
+<Regression_Metrics> a owl:Class ;
+    rdfs:subClassOf <Evaluation_Metrics> .
+
+<Storage> a owl:Class ;
+    rdfs:subClassOf <Storage_and_Computing> .
+
+<Data_Management> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Data_Replication> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Data_Processing_Task> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Collection> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Data_Integration> ],
+        <4_Data> .
+
+<Data_Science> a <Area>,
+        owl:NamedIndividual ;
+    <approach> """machine learning
+statistical learning 
+deep learning"""^^xsd:string .
+
+<Information_Extraction> a owl:Class ;
+    rdfs:subClassOf <Information_and_Knowledge_Processing>,
+        <Task> .
+
+<Reinforcement_Learning> a <Learning_Algorithm>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Policy_Search> .
+
+<Data_Transformation> a owl:Class ;
+    rdfs:subClassOf <Processing> .
+
+<Embeddings> a <Machine_Learning>,
+        <Solution>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Co_Reference_Resolution>,
+        <Create_Named_Entities> ;
+    <Is_part_of> <Similarity> .
+
+<Data_Organization> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Data_Replication> ],
+        <5_Technology> .
+
+<Setup> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Validation> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Learning> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Selection> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Data_Representation_Modelling> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Information_Extraction> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Testing> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Model> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Training> ],
+        <4_Data> .
+
+<Syntactic_Data_Fusion> a <Solution>,
+        owl:NamedIndividual .
+
+<Task> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <System_Orientation> <3_System> <5_Technology> [ a owl:Restriction ;
+                                owl:onProperty <Requires> ;
+                                owl:someValuesFrom <4_Data> ] ) ] ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_part_of> ;
+            owl:someValuesFrom <Solution> ],
+        <Data_and_Process_Management> .
+
+<Service> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_part_of> ;
+            owl:someValuesFrom <Application> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_part_of> ;
+            owl:someValuesFrom <Data_and_Process_Management> ],
+        <1_Business> .
+
+<Classification> a <Solution>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Create_Entity_Label> .
+
+<Communication> a owl:Class ;
+    rdfs:subClassOf <5_Technology> .
+
+<Control> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Requires> ;
+            owl:someValuesFrom <Communication> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Control_Task> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Requires> ;
+            owl:someValuesFrom <Dataflow> ],
+        <3_System> .
+
+<Data_Integration> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Communication> ],
+        <5_Technology> .
+
+<Natural_Language_Processing> a owl:Class ;
+    rdfs:subClassOf <Approach> .
+
+<Training> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:RunsOn ;
+            owl:someValuesFrom <Computing_Units> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Requires> ;
+            owl:someValuesFrom <Computing_Units> ],
+        <4_Data> .
+
+<3_System> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_part_of> ;
+            owl:someValuesFrom <Solution> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Processing> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Engineering_Storage_and_Computing> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Performance> ] .
+
+<Learning_Algorithm> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:ExecutionOf ;
+            owl:someValuesFrom <Neural_Networks> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Learning> ],
+        <Setup> .
+
+<Recommendations> a <Solution>,
+        owl:NamedIndividual ;
+    <Is_implementing> <Candidate_Generation> .
+
+<Roles> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_part_of> ;
+            owl:someValuesFrom <Responsibilities> ],
+        <Governance> .
+
+<Data_Processing_Task> a owl:Class ;
+    rdfs:subClassOf <Information_and_Knowledge_Processing>,
+        <Task> .
+
+<Opportunity> a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( <1_Business> [ a owl:Restriction ;
+                        owl:onProperty <Is_part_of> ;
+                        owl:someValuesFrom <Area> ] [ a owl:Restriction ;
+                        owl:onProperty <Requires> ;
+                        owl:someValuesFrom <Solution> ] ) ] .
+
+<Policy_Search> a <Selection>,
+        <Self_Governance_Definition>,
+        owl:NamedIndividual ;
+    <Is_part_of> <Model-based_Planning> .
+
+<Requires> a owl:ObjectProperty .
+
+<Is_part_of> a owl:ObjectProperty ;
+    rdfs:subPropertyOf ns2:BelongsTo .
+
+<4_Data> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Performance> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <3_System> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <5_Technology> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Storage_and_Computing> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_part_of> ;
+            owl:someValuesFrom <Solution> ] .
+
+<Machine_Learning> a owl:Class ;
+    rdfs:subClassOf <Approach> .
+
+<5_Technology> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Performance> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_part_of> ;
+            owl:someValuesFrom <Solution> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Engineering_Storage_and_Computing> ] .
+
+<Data_Representation_Modelling> a owl:Class ;
+    rdfs:subClassOf <Information_and_Knowledge_Processing>,
+        <Task> .
+
+<Collection> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <has_characterstic> ;
+            owl:someValuesFrom <Communication> ],
+        [ a owl:Restriction ;
+            owl:onProperty <has_characterstic> ;
+            owl:someValuesFrom <Data_Interaction> ],
+        [ a owl:Restriction ;
+            owl:onProperty <has_characterstic> ;
+            owl:someValuesFrom <Data_Integration> ],
+        [ a owl:Restriction ;
+            owl:onProperty ns2:RunsOn ;
+            owl:someValuesFrom <Storage_and_Computing> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Data_Storage> ],
+        [ a owl:Restriction ;
+            owl:onProperty <has_characterstic> ;
+            owl:someValuesFrom <Data_Type> ],
+        [ a owl:Restriction ;
+            owl:onProperty <has_characterstic> ;
+            owl:someValuesFrom <Data_Organization> ],
+        <4_Data> .
+
+<Neural_Networks> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <Is_implementing> ;
+            owl:someValuesFrom <Data_Processing_Task> ],
+        <Deep_Learning>,
+        <Model> .
+
+<Solution> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns2:IsDetermining ;
+            owl:someValuesFrom <Opportunity> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Requires> ;
+            owl:someValuesFrom <System_Orientation> ],
+        [ a owl:Restriction ;
+            owl:onProperty <Is_part_of> ;
+            owl:someValuesFrom <Product> ],
+        <1_Business> .
+
+<Is_implementing> a owl:ObjectProperty .
+
+ns2:IsDetermining a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+[] ns1:axiom "K-Nearest_Neighbors SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Graph SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Support_Vector_Machine SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Neural_Networks SubClassOf Deep_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Auto-Encoder SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Principal_Components_Analysis SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Linear_Regression SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Consistent_Dateset EquivalentTo consistency value true"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Graph SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Deep_Learning DisjointWith Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Deep_Learning DisjointWith Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Machine_Learning SubClassOf Patterns"^^xsd:string ;
+    ns1:type false .
+
+[] ns1:axiom "Data_Processing Type Convolutional"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Feed_Forward SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "K-Nearest_Neighbors SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Opportunity SubClassOf Is_part_of some Area"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Machine_Learning SubClassOf Data"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "K-Nearest_Neighbors SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Feed_Forward SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Linear_Regression SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Machine_Learning SubClassOf Data"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Machine_Learning SubClassOf Data"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Convolutional SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Auto-Encoder SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Type SubClassOf Neural_Networks"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Auto-Encoder SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Machine_Learning SubClassOf Patterns"^^xsd:string ;
+    ns1:type false .
+
+[] ns1:axiom "Type SubClassOf Neural_Networks"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Type SubClassOf Neural_Networks"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Feed_Forward SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Support_Vector_Machine SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Naive_Bayesian EquivalentTo Machine_Learning and ({Classification , Regression})"^^xsd:string ;
+    ns1:type false .
+
+[] ns1:axiom "Logistic_Regression SubClassOf Type"^^xsd:string ;
+    ns1:type false .
+
+[] ns1:axiom "Graph SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "K-Means EquivalentTo Machine_Learning and ({Clustering})"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Linear_Regression SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Logistic_Regression SubClassOf Type"^^xsd:string ;
+    ns1:type false .
+
+[] ns1:axiom "Support_Vector_Machine EquivalentTo {Classification}"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Auto-Encoder EquivalentTo {Anomaly_Detection , Clustering , Feature_Learning , Filtering , Nonlinear_Dimensionality_Reduction}"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Graph SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Naive_Bayesian EquivalentTo Machine_Learning and ({Classification , Regression})"^^xsd:string ;
+    ns1:type false .
+
+[] ns1:axiom "Convolutional SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Linear_Regression SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Deep_Learning DisjointWith Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Support_Vector_Machine SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Opportunity SubClassOf Is_part_of some Area"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Type SubClassOf Neural_Networks"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Linear_Regression SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Regression Type Feed_Forward"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Type SubClassOf Neural_Networks"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "K-Nearest_Neighbors SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Linear_Regression SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "K-Nearest_Neighbors SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Auto-Encoder EquivalentTo {Anomaly_Detection , Clustering , Feature_Learning , Filtering , Nonlinear_Dimensionality_Reduction}"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "K-Nearest_Neighbors SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Auto-Encoder SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Data_Processing Type Convolutional"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "K-Nearest_Neighbors EquivalentTo {Classification , Regression}"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Principal_Components_Analysis SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Machine_Learning SubClassOf Patterns"^^xsd:string ;
+    ns1:type false .
+
+[] ns1:axiom "K-Nearest_Neighbors EquivalentTo {Classification , Regression}"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Auto-Encoder SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Logistic_Regression EquivalentTo {Classification , Regression}"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Graph SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Type SubClassOf Neural_Networks"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Auto-Encoder SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Machine_Learning SubClassOf Data"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Convolutional SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Feed_Forward SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Support_Vector_Machine SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Neural_Networks SubClassOf Deep_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Graph SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Convolutional SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Principal_Components_Analysis SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Convolutional SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "K-Nearest_Neighbors SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Auto-Encoder SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Clustering Type K-Means"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "K-Means EquivalentTo Machine_Learning and ({Clustering})"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Machine_Learning SubClassOf Data"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Naive_Bayesian EquivalentTo Machine_Learning and ({Classification , Regression})"^^xsd:string ;
+    ns1:type false .
+
+[] ns1:axiom "Feed_Forward SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Convolutional SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Type SubClassOf Neural_Networks"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Feed_Forward SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Support_Vector_Machine SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Principal_Components_Analysis SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Solution SubClassOf IsDetermining some Opportunity"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Support_Vector_Machine EquivalentTo {Classification}"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Auto-Encoder SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Deep_Learning DisjointWith Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Feed_Forward SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Graph SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "K-Means EquivalentTo Machine_Learning and ({Clustering})"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Support_Vector_Machine SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Logistic_Regression SubClassOf Type"^^xsd:string ;
+    ns1:type false .
+
+[] ns1:axiom "Convolutional SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Machine_Learning SubClassOf Data"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Solution SubClassOf IsDetermining some Opportunity"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Machine_Learning SubClassOf Data"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Machine_Learning SubClassOf Patterns"^^xsd:string ;
+    ns1:type false .
+
+[] ns1:axiom "Machine_Learning SubClassOf Data"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Logistic_Regression EquivalentTo {Classification , Regression}"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Consistent_Dateset EquivalentTo consistency value true"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Consistent_Dateset EquivalentTo consistency value true"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Graph SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Machine_Learning SubClassOf Patterns"^^xsd:string ;
+    ns1:type false .
+
+[] ns1:axiom "Convolutional EquivalentTo {Classification , Data_Processing}"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Feed_Forward SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Machine_Learning SubClassOf Data"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Type SubClassOf Neural_Networks"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Convolutional EquivalentTo {Classification , Data_Processing}"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Deep_Learning DisjointWith Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Machine_Learning SubClassOf Data"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Deep_Learning DisjointWith Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Support_Vector_Machine SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Deep_Learning DisjointWith Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Convolutional SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Deep_Learning DisjointWith Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Clustering Type K-Means"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Feed_Forward SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Feed_Forward SubClassOf Type"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Principal_Components_Analysis SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Linear_Regression SubClassOf Machine_Learning"^^xsd:string ;
+    ns1:type true .
+
+[] ns1:axiom "Auto-Encoder EquivalentTo {Anomaly_Detection , Clustering , Feature_Learning , Filtering , Nonlinear_Dimensionality_Reduction}"^^xsd:string ;
+    ns1:type true .
+

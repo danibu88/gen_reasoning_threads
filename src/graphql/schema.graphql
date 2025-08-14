@@ -1,0 +1,810 @@
+type Access_Control @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	uri: String!
+}
+type Act @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	control2SIsImplementing: [Control2!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	isPartOfNamedIndividual4S: [NamedIndividual4!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isappliedinNamedIndividual17S: [NamedIndividual17!]! @relationship(type: "ISAPPLIEDIN", direction: OUT)
+	isappliedinNamedIndividual3S: [NamedIndividual3!]! @relationship(type: "ISAPPLIEDIN", direction: OUT)
+	machineLearningsIsImplementing: [Machine_Learning!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	machineLearningsIsPartOf: [Machine_Learning!]! @relationship(type: "IS_PART_OF", direction: IN)
+	namedIndividual16SIsdetermining: [NamedIndividual16!]! @relationship(type: "ISDETERMINING", direction: IN)
+	namedIndividual8SIsPartOf: [NamedIndividual8!]! @relationship(type: "IS_PART_OF", direction: IN)
+	runsonClass5S: [Class5!]! @relationship(type: "RUNSON", direction: OUT)
+	uri: String!
+}
+
+type Acting @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	uri: String!
+}
+
+type Acting2 @node(label: "Acting", additionalLabels: ["Control","NamedIndividual","Resource"]) {
+	control2SIsImplementing: [Control2!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	isImplementingNamedIndividual3S: [NamedIndividual3!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	uri: String!
+}
+
+type Analytics_Design @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	analyticsDesignsIsA: [Analytics_Design!]! @relationship(type: "IS_A", direction: IN)
+	class5SIsImplementing: [Class5!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	humanDependencyResolutionsIssolvedby: [Human_Dependency_Resolution!]! @relationship(type: "ISSOLVEDBY", direction: IN)
+	isAAnalyticsDesigns: [Analytics_Design!]! @relationship(type: "IS_A", direction: OUT)
+	isImplementingNamedIndividual3S: [NamedIndividual3!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isPartOfCommunicationStructures: [Communication_Structure!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	learningAlgorithmsIsA: [Learning_Algorithm!]! @relationship(type: "IS_A", direction: IN)
+	modelDeploymentsIsImplementing: [Model_Deployment!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	namedIndividual3SIssolvedby: [NamedIndividual3!]! @relationship(type: "ISSOLVEDBY", direction: IN)
+	uri: String!
+}
+
+type AnnotationProperty @node(additionalLabels: ["Resource"]) {
+	annotationPropertiesSubpropertyof: [AnnotationProperty!]! @relationship(type: "SUBPROPERTYOF", direction: IN)
+	subpropertyofAnnotationProperties: [AnnotationProperty!]! @relationship(type: "SUBPROPERTYOF", direction: OUT)
+	uri: String!
+}
+
+type Application @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	class2SIsPartOf: [Class2!]! @relationship(type: "IS_PART_OF", direction: IN)
+	class5SIsImplementing: [Class5!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	namedIndividualsIsPartOf: [NamedIndividual!]! @relationship(type: "IS_PART_OF", direction: IN)
+	uri: String!
+}
+
+type Area @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	approach: String
+	areasIsappliedin: [Area!]! @relationship(type: "ISAPPLIEDIN", direction: IN)
+	class4SIsPartOf: [Class4!]! @relationship(type: "IS_PART_OF", direction: IN)
+	communicationStructuresIsappliedin: [Communication_Structure!]! @relationship(type: "ISAPPLIEDIN", direction: IN)
+	isImplementingNamedIndividual3S: [NamedIndividual3!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isappliedinAreas: [Area!]! @relationship(type: "ISAPPLIEDIN", direction: OUT)
+	namedIndividual3SIsPartOf: [NamedIndividual3!]! @relationship(type: "IS_PART_OF", direction: IN)
+	namedIndividual9SIsPartOf: [NamedIndividual9!]! @relationship(type: "IS_PART_OF", direction: IN)
+	namedIndividualsBelongsto: [NamedIndividual!]! @relationship(type: "BELONGSTO", direction: IN)
+	namedIndividualsIsappliedin: [NamedIndividual!]! @relationship(type: "ISAPPLIEDIN", direction: IN)
+	requiresNamedIndividual9S: [NamedIndividual9!]! @relationship(type: "REQUIRES", direction: OUT)
+	uri: String!
+}
+
+type Class @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	namedIndividual15SIsPartOf: [NamedIndividual15!]! @relationship(type: "IS_PART_OF", direction: IN)
+	namedIndividual3SIssolvedby: [NamedIndividual3!]! @relationship(type: "ISSOLVEDBY", direction: IN)
+	uri: String!
+}
+
+type Class2 @node(label: "Class", additionalLabels: ["NamedIndividual","Resource","Service"]) {
+	isPartOfApplications: [Application!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	subclassofClass3S: [Class3!]! @relationship(type: "SUBCLASSOF", direction: OUT)
+	subclassofResource2S: [Resource2!]! @relationship(type: "SUBCLASSOF", direction: OUT)
+	uri: String!
+}
+
+type Class3 @node(label: "Class", additionalLabels: ["Resource"]) {
+	class2SSubclassof: [Class2!]! @relationship(type: "SUBCLASSOF", direction: IN)
+	class3SDisjointwith: [Class3!]! @relationship(type: "DISJOINTWITH", direction: IN)
+	class3SEquivalentclass: [Class3!]! @relationship(type: "EQUIVALENTCLASS", direction: IN)
+	class3SSubclassof: [Class3!]! @relationship(type: "SUBCLASSOF", direction: IN)
+	class5SSubclassof: [Class5!]! @relationship(type: "SUBCLASSOF", direction: IN)
+	datatypePropertiesDomain: [DatatypeProperty!]! @relationship(type: "DOMAIN", direction: IN)
+	disjointwithClass3S: [Class3!]! @relationship(type: "DISJOINTWITH", direction: OUT)
+	equivalentclassClass3S: [Class3!]! @relationship(type: "EQUIVALENTCLASS", direction: OUT)
+	equivalentclassResource2S: [Resource2!]! @relationship(type: "EQUIVALENTCLASS", direction: OUT)
+	functionalPropertiesRange: [FunctionalProperty!]! @relationship(type: "RANGE", direction: IN)
+	intersectionofResources: [Resource!]! @relationship(type: "INTERSECTIONOF", direction: OUT)
+	resource2SSomevaluesfrom: [Resource2!]! @relationship(type: "SOMEVALUESFROM", direction: IN)
+	resourcesFirst: [Resource!]! @relationship(type: "FIRST", direction: IN)
+	subclassofClass3S: [Class3!]! @relationship(type: "SUBCLASSOF", direction: OUT)
+	subclassofClass5S: [Class5!]! @relationship(type: "SUBCLASSOF", direction: OUT)
+	subclassofResource2S: [Resource2!]! @relationship(type: "SUBCLASSOF", direction: OUT)
+	unionofResources: [Resource!]! @relationship(type: "UNIONOF", direction: OUT)
+	uri: String!
+}
+
+type Class4 @node(label: "Class", additionalLabels: ["NamedIndividual","Opportunity","Resource"]) {
+	belongstoNamedIndividuals: [NamedIndividual!]! @relationship(type: "BELONGSTO", direction: OUT)
+	control2SIsImplementing: [Control2!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	isPartOfAreas: [Area!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isappliedinNamedIndividual3S: [NamedIndividual3!]! @relationship(type: "ISAPPLIEDIN", direction: OUT)
+	issolvedbyDataSharings: [Data_Sharing!]! @relationship(type: "ISSOLVEDBY", direction: OUT)
+	resource2SSomevaluesfrom: [Resource2!]! @relationship(type: "SOMEVALUESFROM", direction: IN)
+	uri: String!
+}
+
+type Class5 @node(label: "Class", additionalLabels: ["NamedIndividual","Resource","Storage"]) {
+	actsRunson: [Act!]! @relationship(type: "RUNSON", direction: IN)
+	class3SSubclassof: [Class3!]! @relationship(type: "SUBCLASSOF", direction: IN)
+	control3SRunson: [Control3!]! @relationship(type: "RUNSON", direction: IN)
+	datatypePropertiesDomain: [DatatypeProperty!]! @relationship(type: "DOMAIN", direction: IN)
+	isAMudToStructureArchitecturalPatterns: [Mud_to_Structure_Architectural_Patterns!]! @relationship(type: "IS_A", direction: OUT)
+	isImplementingAnalyticsDesigns: [Analytics_Design!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingApplications: [Application!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingDataStorages: [Data_Storage!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	namedIndividual13SConnectsto: [NamedIndividual13!]! @relationship(type: "CONNECTSTO", direction: IN)
+	subclassofClass3S: [Class3!]! @relationship(type: "SUBCLASSOF", direction: OUT)
+	uri: String!
+}
+
+type Class6 @node(label: "Class", additionalLabels: ["Data_Processing_Task","NamedIndividual","Resource"]) {
+	dataEnhancement2SIsImplementing: [Data_Enhancement2!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	dataMappingsIsImplementing: [Data_Mapping!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	uri: String!
+}
+
+type Classification_Metrics @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	isPartOfDataRepresentationModellings: [Data_Representation_Modelling!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	namedIndividual3SIssolvedby: [NamedIndividual3!]! @relationship(type: "ISSOLVEDBY", direction: IN)
+	uri: String!
+}
+
+type Communication @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	isImplementingNamedIndividual3S: [NamedIndividual3!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isPartOfMachineLearning2S: [Machine_Learning2!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	uri: String!
+}
+
+type Communication_Structure @node(additionalLabels: ["NamedIndividual","Resource","System_Orientation"]) {
+	analyticsDesignsIsPartOf: [Analytics_Design!]! @relationship(type: "IS_PART_OF", direction: IN)
+	dataStoragesBelongsto: [Data_Storage!]! @relationship(type: "BELONGSTO", direction: IN)
+	dataStoragesIsPartOf: [Data_Storage!]! @relationship(type: "IS_PART_OF", direction: IN)
+	isappliedinAreas: [Area!]! @relationship(type: "ISAPPLIEDIN", direction: OUT)
+	uri: String!
+}
+
+type Computing_Units @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	namedIndividual8SRequires: [NamedIndividual8!]! @relationship(type: "REQUIRES", direction: IN)
+	uri: String!
+}
+
+type Control @node(additionalLabels: ["NamedIndividual","Resource","Validation"]) {
+	isImplementingNamedIndividual17S: [NamedIndividual17!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	uri: String!
+}
+
+type Control2 @node(label: "Control", additionalLabels: ["NamedIndividual","Resource"]) {
+	isImplementingActing2S: [Acting2!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingActs: [Act!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingClass4S: [Class4!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingNamedIndividual17S: [NamedIndividual17!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isPartOfLearningAlgorithms: [Learning_Algorithm!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isappliedinLearningAlgorithms: [Learning_Algorithm!]! @relationship(type: "ISAPPLIEDIN", direction: OUT)
+	isdeterminingLearningAlgorithms: [Learning_Algorithm!]! @relationship(type: "ISDETERMINING", direction: OUT)
+	namedIndividual3SIssolvedby: [NamedIndividual3!]! @relationship(type: "ISSOLVEDBY", direction: IN)
+	uri: String!
+}
+
+type Control3 @node(label: "Control", additionalLabels: ["Data_Corpus_Creation","Environment_Interaction","NamedIndividual","Resource","Sensing"]) {
+	namedIndividual3SIssolvedby: [NamedIndividual3!]! @relationship(type: "ISSOLVEDBY", direction: IN)
+	runsonClass5S: [Class5!]! @relationship(type: "RUNSON", direction: OUT)
+	uri: String!
+}
+
+type Control_Task @node(additionalLabels: ["NamedIndividual","Organization_of_Work","Resource","Schedule_Formulation"]) {
+	learningsIsdetermining: [Learning!]! @relationship(type: "ISDETERMINING", direction: IN)
+	uri: String!
+}
+
+type Data_Corpus_Creation @node(additionalLabels: ["Data_Integration","NamedIndividual","Resource"]) {
+	isImplementingNamedIndividual3S: [NamedIndividual3!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	uri: String!
+}
+
+type Data_Corpus_Creation2 @node(label: "Data_Corpus_Creation", additionalLabels: ["NamedIndividual","Resource"]) {
+	dataTypesIsImplementing: [Data_Type!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	isPartOfNamedIndividual4S: [NamedIndividual4!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	uri: String!
+}
+
+type Data_Enhancement @node(additionalLabels: ["Information_Extraction","NamedIndividual","Resource"]) {
+	uri: String!
+}
+
+type Data_Enhancement2 @node(label: "Data_Enhancement", additionalLabels: ["NamedIndividual","Resource"]) {
+	isImplementingClass6S: [Class6!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	requiresDataProcessingTask2S: [Data_Processing_Task2!]! @relationship(type: "REQUIRES", direction: OUT)
+	uri: String!
+}
+
+type Data_Formatting @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	uri: String!
+}
+
+type Data_Integration @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	dataIntegrationsIsImplementing: [Data_Integration!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	dataPipelinesIsImplementing: [Data_Pipeline!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	dataPipelinesIsPartOf: [Data_Pipeline!]! @relationship(type: "IS_PART_OF", direction: IN)
+	inferencesIsPartOf: [Inference!]! @relationship(type: "IS_PART_OF", direction: IN)
+	isImplementingDataIntegrations: [Data_Integration!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingLearningAlgorithms: [Learning_Algorithm!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingNamedIndividual4S: [NamedIndividual4!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	uri: String!
+}
+
+type Data_Interaction @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	uri: String!
+}
+
+type Data_Mapping @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	isImplementingClass6S: [Class6!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	uri: String!
+}
+
+type Data_Organization @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	isImplementingInformationExtractions: [Information_Extraction!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingNamedIndividual15S: [NamedIndividual15!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingNamedIndividual4S: [NamedIndividual4!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingNamedIndividual8S: [NamedIndividual8!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isPartOfNamedIndividual12S: [NamedIndividual12!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isdeterminingNamedIndividual13S: [NamedIndividual13!]! @relationship(type: "ISDETERMINING", direction: OUT)
+	uri: String!
+}
+
+type Data_Pipeline @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	dataPipelinesIsA: [Data_Pipeline!]! @relationship(type: "IS_A", direction: IN)
+	dataProvisionsRequires: [Data_Provision!]! @relationship(type: "REQUIRES", direction: IN)
+	isADataPipelines: [Data_Pipeline!]! @relationship(type: "IS_A", direction: OUT)
+	isImplementingDataIntegrations: [Data_Integration!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isPartOfDataIntegrations: [Data_Integration!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isPartOfDataProvisions: [Data_Provision!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	uri: String!
+}
+
+type Data_Processing @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	uri: String!
+}
+
+type Data_Processing_Task @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	dataProcessingTask2SIsPartOf: [Data_Processing_Task2!]! @relationship(type: "IS_PART_OF", direction: IN)
+	dataTransformationsIsPartOf: [Data_Transformation!]! @relationship(type: "IS_PART_OF", direction: IN)
+	informationExtractionsIsPartOf: [Information_Extraction!]! @relationship(type: "IS_PART_OF", direction: IN)
+	isImplementingNamedIndividual3S: [NamedIndividual3!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isPartOfNamedIndividual4S: [NamedIndividual4!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	learningAlgorithmsIsImplementing: [Learning_Algorithm!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	machineLearningsIsImplementing: [Machine_Learning!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	namedIndividual13SRequires: [NamedIndividual13!]! @relationship(type: "REQUIRES", direction: IN)
+	namedIndividual3SIssolvedby: [NamedIndividual3!]! @relationship(type: "ISSOLVEDBY", direction: IN)
+	namedIndividual8SIsImplementing: [NamedIndividual8!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	namedIndividual8SIsPartOf: [NamedIndividual8!]! @relationship(type: "IS_PART_OF", direction: IN)
+	uri: String!
+}
+
+type Data_Processing_Task2 @node(label: "Data_Processing_Task", additionalLabels: ["Data_Transformation","NamedIndividual","Resource"]) {
+	dataEnhancement2SRequires: [Data_Enhancement2!]! @relationship(type: "REQUIRES", direction: IN)
+	isPartOfDataProcessingTasks: [Data_Processing_Task!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	uri: String!
+}
+
+type Data_Protection @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	uri: String!
+}
+
+type Data_Provision @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	dataPipelinesIsPartOf: [Data_Pipeline!]! @relationship(type: "IS_PART_OF", direction: IN)
+	isADataStorages: [Data_Storage!]! @relationship(type: "IS_A", direction: OUT)
+	isdeterminingNamedIndividual4S: [NamedIndividual4!]! @relationship(type: "ISDETERMINING", direction: OUT)
+	requiresDataPipelines: [Data_Pipeline!]! @relationship(type: "REQUIRES", direction: OUT)
+	uri: String!
+}
+
+type Data_Replication @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	uri: String!
+}
+
+type Data_Representation_Modelling @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	classificationMetricsIsPartOf: [Classification_Metrics!]! @relationship(type: "IS_PART_OF", direction: IN)
+	dataRepresentationModellingsRequires: [Data_Representation_Modelling!]! @relationship(type: "REQUIRES", direction: IN)
+	isAMachineLearning2S: [Machine_Learning2!]! @relationship(type: "IS_A", direction: OUT)
+	isPartOfNamedIndividual4S: [NamedIndividual4!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	machineLearningsIsImplementing: [Machine_Learning!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	machineLearningsIsPartOf: [Machine_Learning!]! @relationship(type: "IS_PART_OF", direction: IN)
+	namedIndividual12SIsImplementing: [NamedIndividual12!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	namedIndividual6SIsPartOf: [NamedIndividual6!]! @relationship(type: "IS_PART_OF", direction: IN)
+	namedIndividual8SIsPartOf: [NamedIndividual8!]! @relationship(type: "IS_PART_OF", direction: IN)
+	requiresDataRepresentationModellings: [Data_Representation_Modelling!]! @relationship(type: "REQUIRES", direction: OUT)
+	sameasInformationExtractions: [Information_Extraction!]! @relationship(type: "SAMEAS", direction: OUT)
+	uri: String!
+}
+
+type Data_Sharing @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	class4SIssolvedby: [Class4!]! @relationship(type: "ISSOLVEDBY", direction: IN)
+	uri: String!
+}
+
+type Data_Storage @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	belongstoCommunicationStructures: [Communication_Structure!]! @relationship(type: "BELONGSTO", direction: OUT)
+	class5SIsImplementing: [Class5!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	dataProvisionsIsA: [Data_Provision!]! @relationship(type: "IS_A", direction: IN)
+	dataStoragesSameas: [Data_Storage!]! @relationship(type: "SAMEAS", direction: IN)
+	humanDependencyResolutionsIssolvedby: [Human_Dependency_Resolution!]! @relationship(type: "ISSOLVEDBY", direction: IN)
+	isImplementingNamedIndividual3S: [NamedIndividual3!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isPartOfCommunicationStructures: [Communication_Structure!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	namedIndividual3SIssolvedby: [NamedIndividual3!]! @relationship(type: "ISSOLVEDBY", direction: IN)
+	sameasDataStorages: [Data_Storage!]! @relationship(type: "SAMEAS", direction: OUT)
+	uri: String!
+}
+
+type Data_Transformation @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	isPartOfDataProcessingTasks: [Data_Processing_Task!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isappliedinNamedIndividual2S: [NamedIndividual2!]! @relationship(type: "ISAPPLIEDIN", direction: OUT)
+	uri: String!
+}
+
+type Data_Type @node(additionalLabels: ["NamedIndividual","Resource","Unstructured_Dataset"]) {
+	isImplementingDataCorpusCreation2S: [Data_Corpus_Creation2!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingInformationExtractions: [Information_Extraction!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	namedIndividual2SRequires: [NamedIndividual2!]! @relationship(type: "REQUIRES", direction: IN)
+	namedIndividual8SRequires: [NamedIndividual8!]! @relationship(type: "REQUIRES", direction: IN)
+	uri: String!
+}
+
+type Data_Type2 @node(label: "Data_Type", additionalLabels: ["NamedIndividual","Resource"]) {
+	uri: String!
+}
+
+type Dataflow @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	uri: String!
+}
+
+type Datatype @node(additionalLabels: ["Resource"]) {
+	datatypePropertiesRange: [DatatypeProperty!]! @relationship(type: "RANGE", direction: IN)
+	ondatatypeResources: [Resource!]! @relationship(type: "ONDATATYPE", direction: OUT)
+	oneofLists: [List!]! @relationship(type: "ONEOF", direction: OUT)
+	resource2SSomevaluesfrom: [Resource2!]! @relationship(type: "SOMEVALUESFROM", direction: IN)
+	uri: String!
+	withrestrictionsResources: [Resource!]! @relationship(type: "WITHRESTRICTIONS", direction: OUT)
+}
+
+type DatatypeProperty @node(additionalLabels: ["Resource"]) {
+	domainClass3S: [Class3!]! @relationship(type: "DOMAIN", direction: OUT)
+	domainClass5S: [Class5!]! @relationship(type: "DOMAIN", direction: OUT)
+	rangeDatatypes: [Datatype!]! @relationship(type: "RANGE", direction: OUT)
+	rangeResources: [Resource!]! @relationship(type: "RANGE", direction: OUT)
+	resource2SOnproperty: [Resource2!]! @relationship(type: "ONPROPERTY", direction: IN)
+	subpropertyofResources: [Resource!]! @relationship(type: "SUBPROPERTYOF", direction: OUT)
+	uri: String!
+}
+
+type Distributed_Architectural_Patterns @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	uri: String!
+}
+
+type Feature_Extraction @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	uri: String!
+}
+
+type FunctionalProperty @node(additionalLabels: ["ObjectProperty","Resource"]) {
+	functionalPropertiesSubpropertyof: [FunctionalProperty!]! @relationship(type: "SUBPROPERTYOF", direction: IN)
+	objectPropertiesSubpropertyof: [ObjectProperty!]! @relationship(type: "SUBPROPERTYOF", direction: IN)
+	rangeClass3S: [Class3!]! @relationship(type: "RANGE", direction: OUT)
+	resource2SOnproperty: [Resource2!]! @relationship(type: "ONPROPERTY", direction: IN)
+	subpropertyofFunctionalProperties: [FunctionalProperty!]! @relationship(type: "SUBPROPERTYOF", direction: OUT)
+	subpropertyofResources: [Resource!]! @relationship(type: "SUBPROPERTYOF", direction: OUT)
+	uri: String!
+}
+
+type Geometry @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	isPartOfInformationExtraction2S: [Information_Extraction2!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	uri: String!
+}
+
+type Human_Dependency_Resolution @node(additionalLabels: ["NamedIndividual","Opportunity","Resource"]) {
+	belongstoNamedIndividuals: [NamedIndividual!]! @relationship(type: "BELONGSTO", direction: OUT)
+	issolvedbyAnalyticsDesigns: [Analytics_Design!]! @relationship(type: "ISSOLVEDBY", direction: OUT)
+	issolvedbyDataStorages: [Data_Storage!]! @relationship(type: "ISSOLVEDBY", direction: OUT)
+	issolvedbyLargeDatasets: [Large_Dataset!]! @relationship(type: "ISSOLVEDBY", direction: OUT)
+	issolvedbyNamedIndividual4S: [NamedIndividual4!]! @relationship(type: "ISSOLVEDBY", direction: OUT)
+	namedIndividual3SIsappliedin: [NamedIndividual3!]! @relationship(type: "ISAPPLIEDIN", direction: IN)
+	uri: String!
+}
+
+type Hyperparameter_Setting @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	machineLearningsIsImplementing: [Machine_Learning!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	uri: String!
+}
+
+type Inference @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	isPartOfDataIntegrations: [Data_Integration!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	uri: String!
+}
+
+type Information_Extraction @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	dataOrganizationsIsImplementing: [Data_Organization!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	dataRepresentationModellingsSameas: [Data_Representation_Modelling!]! @relationship(type: "SAMEAS", direction: IN)
+	dataTypesIsImplementing: [Data_Type!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	informationExtraction2SIsappliedin: [Information_Extraction2!]! @relationship(type: "ISAPPLIEDIN", direction: IN)
+	informationExtractionsIsPartOf: [Information_Extraction!]! @relationship(type: "IS_PART_OF", direction: IN)
+	isPartOfDataProcessingTasks: [Data_Processing_Task!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isPartOfInformationExtractions: [Information_Extraction!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isPartOfNamedIndividual4S: [NamedIndividual4!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isappliedinNamedIndividual2S: [NamedIndividual2!]! @relationship(type: "ISAPPLIEDIN", direction: OUT)
+	machineLearning2SIsImplementing: [Machine_Learning2!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	namedIndividual2SIsImplementing: [NamedIndividual2!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	namedIndividual4SIsImplementing: [NamedIndividual4!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	namedIndividual8SIsImplementing: [NamedIndividual8!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	uri: String!
+}
+
+type Information_Extraction2 @node(label: "Information_Extraction", additionalLabels: ["NamedIndividual","Natural_Language_Processing","Resource"]) {
+	geometriesIsPartOf: [Geometry!]! @relationship(type: "IS_PART_OF", direction: IN)
+	isPartOfNamedIndividual4S: [NamedIndividual4!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isappliedinInformationExtractions: [Information_Extraction!]! @relationship(type: "ISAPPLIEDIN", direction: OUT)
+	machineLearning2SIsPartOf: [Machine_Learning2!]! @relationship(type: "IS_PART_OF", direction: IN)
+	machineLearningsIsImplementing: [Machine_Learning!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	namedIndividual12SIsPartOf: [NamedIndividual12!]! @relationship(type: "IS_PART_OF", direction: IN)
+	namedIndividual13SIsImplementing: [NamedIndividual13!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	uri: String!
+}
+
+type Interactive_Architectural_Patterns @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	uri: String!
+}
+
+type Large_Dataset @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	humanDependencyResolutionsIssolvedby: [Human_Dependency_Resolution!]! @relationship(type: "ISSOLVEDBY", direction: IN)
+	learningAlgorithmsRequires: [Learning_Algorithm!]! @relationship(type: "REQUIRES", direction: IN)
+	namedIndividual3SIssolvedby: [NamedIndividual3!]! @relationship(type: "ISSOLVEDBY", direction: IN)
+	uri: String!
+}
+
+type Learning @node(additionalLabels: ["NamedIndividual","Resource","Self_Goal_Setting"]) {
+	isPartOfNamedIndividual17S: [NamedIndividual17!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isdeterminingControlTasks: [Control_Task!]! @relationship(type: "ISDETERMINING", direction: OUT)
+	uri: String!
+}
+
+type Learning_Algorithm @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	control2SIsPartOf: [Control2!]! @relationship(type: "IS_PART_OF", direction: IN)
+	control2SIsappliedin: [Control2!]! @relationship(type: "ISAPPLIEDIN", direction: IN)
+	control2SIsdetermining: [Control2!]! @relationship(type: "ISDETERMINING", direction: IN)
+	dataIntegrationsIsImplementing: [Data_Integration!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	isAAnalyticsDesigns: [Analytics_Design!]! @relationship(type: "IS_A", direction: OUT)
+	isALearningAlgorithms: [Learning_Algorithm!]! @relationship(type: "IS_A", direction: OUT)
+	isImplementingDataProcessingTasks: [Data_Processing_Task!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingLearningAlgorithms: [Learning_Algorithm!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingNamedIndividual12S: [NamedIndividual12!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingNamedIndividual17S: [NamedIndividual17!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingNamedIndividual8S: [NamedIndividual8!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	learningAlgorithmsIsA: [Learning_Algorithm!]! @relationship(type: "IS_A", direction: IN)
+	learningAlgorithmsIsImplementing: [Learning_Algorithm!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	namedIndividual16SIsPartOf: [NamedIndividual16!]! @relationship(type: "IS_PART_OF", direction: IN)
+	namedIndividual8SIsPartOf: [NamedIndividual8!]! @relationship(type: "IS_PART_OF", direction: IN)
+	namedIndividual8SRequires: [NamedIndividual8!]! @relationship(type: "REQUIRES", direction: IN)
+	requiresLargeDatasets: [Large_Dataset!]! @relationship(type: "REQUIRES", direction: OUT)
+	uri: String!
+}
+
+type List @node(additionalLabels: ["Resource"]) {
+	datatypesOneof: [Datatype!]! @relationship(type: "ONEOF", direction: IN)
+	first: String!
+	listsRest: [List!]! @relationship(type: "REST", direction: IN)
+	restLists: [List!]! @relationship(type: "REST", direction: OUT)
+	restResources: [Resource!]! @relationship(type: "REST", direction: OUT)
+	uri: String!
+}
+
+type Machine_Learning @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	callsforexecutionNamedIndividual8S: [NamedIndividual8!]! @relationship(type: "CALLSFOREXECUTION", direction: OUT)
+	isAMachineLearning2S: [Machine_Learning2!]! @relationship(type: "IS_A", direction: OUT)
+	isImplementingActs: [Act!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingDataProcessingTasks: [Data_Processing_Task!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingDataRepresentationModellings: [Data_Representation_Modelling!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingHyperparameterSettings: [Hyperparameter_Setting!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingInformationExtraction2S: [Information_Extraction2!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingMachineLearnings: [Machine_Learning!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingNamedIndividual17S: [NamedIndividual17!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isPartOfActs: [Act!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isPartOfDataRepresentationModellings: [Data_Representation_Modelling!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isPartOfMachineLearning2S: [Machine_Learning2!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isPartOfMachineLearnings: [Machine_Learning!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	machineLearningsIsImplementing: [Machine_Learning!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	machineLearningsIsPartOf: [Machine_Learning!]! @relationship(type: "IS_PART_OF", direction: IN)
+	namedIndividual16SIsPartOf: [NamedIndividual16!]! @relationship(type: "IS_PART_OF", direction: IN)
+	namedIndividual8SIsPartOf: [NamedIndividual8!]! @relationship(type: "IS_PART_OF", direction: IN)
+	namedIndividual8SRequires: [NamedIndividual8!]! @relationship(type: "REQUIRES", direction: IN)
+	type_of_activation_function: String
+	uri: String!
+}
+
+type Machine_Learning2 @node(label: "Machine_Learning", additionalLabels: ["NamedIndividual","Resource","Solution"]) {
+	communicationsIsPartOf: [Communication!]! @relationship(type: "IS_PART_OF", direction: IN)
+	dataRepresentationModellingsIsA: [Data_Representation_Modelling!]! @relationship(type: "IS_A", direction: IN)
+	isImplementingInformationExtractions: [Information_Extraction!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isPartOfInformationExtraction2S: [Information_Extraction2!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	machineLearningsIsA: [Machine_Learning!]! @relationship(type: "IS_A", direction: IN)
+	machineLearningsIsPartOf: [Machine_Learning!]! @relationship(type: "IS_PART_OF", direction: IN)
+	namedIndividual8SIsPartOf: [NamedIndividual8!]! @relationship(type: "IS_PART_OF", direction: IN)
+	uri: String!
+}
+
+type Management @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	uri: String!
+}
+
+type Model_Deployment @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	isImplementingAnalyticsDesigns: [Analytics_Design!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	uri: String!
+}
+
+type Mud_to_Structure_Architectural_Patterns @node(additionalLabels: ["NamedIndividual","Resource"]) {
+	class5SIsA: [Class5!]! @relationship(type: "IS_A", direction: IN)
+	uri: String!
+}
+
+type NamedIndividual @node(additionalLabels: ["Resource","Service"]) {
+	belongstoAreas: [Area!]! @relationship(type: "BELONGSTO", direction: OUT)
+	class4SBelongsto: [Class4!]! @relationship(type: "BELONGSTO", direction: IN)
+	humanDependencyResolutionsBelongsto: [Human_Dependency_Resolution!]! @relationship(type: "BELONGSTO", direction: IN)
+	isPartOfApplications: [Application!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isappliedinAreas: [Area!]! @relationship(type: "ISAPPLIEDIN", direction: OUT)
+	namedIndividual3SBelongsto: [NamedIndividual3!]! @relationship(type: "BELONGSTO", direction: IN)
+	namedIndividual3SIsappliedin: [NamedIndividual3!]! @relationship(type: "ISAPPLIEDIN", direction: IN)
+	uri: String!
+}
+
+type NamedIndividual10 @node(label: "NamedIndividual", additionalLabels: ["Resource","Selection"]) {
+	isPartOfNamedIndividual17S: [NamedIndividual17!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isPartOfNamedIndividual4S: [NamedIndividual4!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	namedIndividual13SIsImplementing: [NamedIndividual13!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	namedIndividual16SIsImplementing: [NamedIndividual16!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	namedIndividual4SIsImplementing: [NamedIndividual4!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	uri: String!
+}
+
+type NamedIndividual11 @node(label: "NamedIndividual", additionalLabels: ["Resource"]) {
+	typeResource2S: [Resource2!]! @relationship(type: "TYPE", direction: OUT)
+	uri: String!
+}
+
+type NamedIndividual12 @node(label: "NamedIndividual", additionalLabels: ["Natural_Language_Processing","Resource"]) {
+	dataOrganizationsIsPartOf: [Data_Organization!]! @relationship(type: "IS_PART_OF", direction: IN)
+	isImplementingDataRepresentationModellings: [Data_Representation_Modelling!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isPartOfInformationExtraction2S: [Information_Extraction2!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isPartOfNamedIndividual12S: [NamedIndividual12!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	learningAlgorithmsIsImplementing: [Learning_Algorithm!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	namedIndividual12SIsPartOf: [NamedIndividual12!]! @relationship(type: "IS_PART_OF", direction: IN)
+	uri: String!
+	volume: BigInt
+}
+
+type NamedIndividual13 @node(label: "NamedIndividual", additionalLabels: ["Resource","Storage"]) {
+	connectstoClass5S: [Class5!]! @relationship(type: "CONNECTSTO", direction: OUT)
+	dataOrganizationsIsdetermining: [Data_Organization!]! @relationship(type: "ISDETERMINING", direction: IN)
+	isImplementingInformationExtraction2S: [Information_Extraction2!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingNamedIndividual10S: [NamedIndividual10!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	requiresDataProcessingTasks: [Data_Processing_Task!]! @relationship(type: "REQUIRES", direction: OUT)
+	uri: String!
+}
+
+type NamedIndividual14 @node(label: "NamedIndividual", additionalLabels: ["Organization_of_Work","Resource"]) {
+	uri: String!
+}
+
+type NamedIndividual15 @node(label: "NamedIndividual", additionalLabels: ["Resource","Visualization"]) {
+	dataOrganizationsIsImplementing: [Data_Organization!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	isPartOfClasses: [Class!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	uri: String!
+}
+
+type NamedIndividual16 @node(label: "NamedIndividual", additionalLabels: ["Reinforcement","Resource"]) {
+	isImplementingNamedIndividual10S: [NamedIndividual10!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingNamedIndividual3S: [NamedIndividual3!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isPartOfLearningAlgorithms: [Learning_Algorithm!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isPartOfMachineLearnings: [Machine_Learning!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isappliedinNamedIndividual17S: [NamedIndividual17!]! @relationship(type: "ISAPPLIEDIN", direction: OUT)
+	isdeterminingActs: [Act!]! @relationship(type: "ISDETERMINING", direction: OUT)
+	uri: String!
+}
+
+type NamedIndividual17 @node(label: "NamedIndividual", additionalLabels: ["Resource","Selection","Self_Governance_Definition"]) {
+	actsIsappliedin: [Act!]! @relationship(type: "ISAPPLIEDIN", direction: IN)
+	control2SIsImplementing: [Control2!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	controlsIsImplementing: [Control!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	isPartOfNamedIndividual4S: [NamedIndividual4!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	learningAlgorithmsIsImplementing: [Learning_Algorithm!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	learningsIsPartOf: [Learning!]! @relationship(type: "IS_PART_OF", direction: IN)
+	machineLearningsIsImplementing: [Machine_Learning!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	namedIndividual10SIsPartOf: [NamedIndividual10!]! @relationship(type: "IS_PART_OF", direction: IN)
+	namedIndividual16SIsappliedin: [NamedIndividual16!]! @relationship(type: "ISAPPLIEDIN", direction: IN)
+	namedIndividual6SIsImplementing: [NamedIndividual6!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	uri: String!
+}
+
+type NamedIndividual18 @node(label: "NamedIndividual", additionalLabels: ["Product","Resource"]) {
+	namedIndividual3SBelongsto: [NamedIndividual3!]! @relationship(type: "BELONGSTO", direction: IN)
+	uri: String!
+}
+
+type NamedIndividual19 @node(label: "NamedIndividual", additionalLabels: ["Parallel_Computation","Resource"]) {
+	uri: String!
+}
+
+type NamedIndividual2 @node(label: "NamedIndividual", additionalLabels: ["Natural_Language_Processing","Resource","Solution"]) {
+	dataTransformationsIsappliedin: [Data_Transformation!]! @relationship(type: "ISAPPLIEDIN", direction: IN)
+	informationExtractionsIsappliedin: [Information_Extraction!]! @relationship(type: "ISAPPLIEDIN", direction: IN)
+	isImplementingInformationExtractions: [Information_Extraction!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isappliedinNamedIndividual4S: [NamedIndividual4!]! @relationship(type: "ISAPPLIEDIN", direction: OUT)
+	requiresDataTypes: [Data_Type!]! @relationship(type: "REQUIRES", direction: OUT)
+	uri: String!
+}
+
+type NamedIndividual20 @node(label: "NamedIndividual", additionalLabels: ["Resource","Structural_Decomposition"]) {
+	uri: String!
+}
+
+type NamedIndividual3 @node(label: "NamedIndividual", additionalLabels: ["Opportunity","Resource"]) {
+	acting2SIsImplementing: [Acting2!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	actsIsappliedin: [Act!]! @relationship(type: "ISAPPLIEDIN", direction: IN)
+	analyticsDesignsIsImplementing: [Analytics_Design!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	areasIsImplementing: [Area!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	belongstoNamedIndividual18S: [NamedIndividual18!]! @relationship(type: "BELONGSTO", direction: OUT)
+	belongstoNamedIndividual3S: [NamedIndividual3!]! @relationship(type: "BELONGSTO", direction: OUT)
+	belongstoNamedIndividuals: [NamedIndividual!]! @relationship(type: "BELONGSTO", direction: OUT)
+	class4SIsappliedin: [Class4!]! @relationship(type: "ISAPPLIEDIN", direction: IN)
+	communicationsIsImplementing: [Communication!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	dataCorpusCreationsIsImplementing: [Data_Corpus_Creation!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	dataProcessingTasksIsImplementing: [Data_Processing_Task!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	dataStoragesIsImplementing: [Data_Storage!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	isImplementingNamedIndividual3S: [NamedIndividual3!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isPartOfAreas: [Area!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isappliedinHumanDependencyResolutions: [Human_Dependency_Resolution!]! @relationship(type: "ISAPPLIEDIN", direction: OUT)
+	isappliedinNamedIndividual3S: [NamedIndividual3!]! @relationship(type: "ISAPPLIEDIN", direction: OUT)
+	isappliedinNamedIndividuals: [NamedIndividual!]! @relationship(type: "ISAPPLIEDIN", direction: OUT)
+	issolvedbyAnalyticsDesigns: [Analytics_Design!]! @relationship(type: "ISSOLVEDBY", direction: OUT)
+	issolvedbyClasses: [Class!]! @relationship(type: "ISSOLVEDBY", direction: OUT)
+	issolvedbyClassificationMetrics: [Classification_Metrics!]! @relationship(type: "ISSOLVEDBY", direction: OUT)
+	issolvedbyControl2S: [Control2!]! @relationship(type: "ISSOLVEDBY", direction: OUT)
+	issolvedbyControl3S: [Control3!]! @relationship(type: "ISSOLVEDBY", direction: OUT)
+	issolvedbyDataProcessingTasks: [Data_Processing_Task!]! @relationship(type: "ISSOLVEDBY", direction: OUT)
+	issolvedbyDataStorages: [Data_Storage!]! @relationship(type: "ISSOLVEDBY", direction: OUT)
+	issolvedbyLargeDatasets: [Large_Dataset!]! @relationship(type: "ISSOLVEDBY", direction: OUT)
+	issolvedbyNamedIndividual4S: [NamedIndividual4!]! @relationship(type: "ISSOLVEDBY", direction: OUT)
+	issolvedbyNamedIndividual6S: [NamedIndividual6!]! @relationship(type: "ISSOLVEDBY", direction: OUT)
+	namedIndividual16SIsImplementing: [NamedIndividual16!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	namedIndividual3SBelongsto: [NamedIndividual3!]! @relationship(type: "BELONGSTO", direction: IN)
+	namedIndividual3SIsImplementing: [NamedIndividual3!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	namedIndividual3SIsappliedin: [NamedIndividual3!]! @relationship(type: "ISAPPLIEDIN", direction: IN)
+	uri: String!
+}
+
+type NamedIndividual4 @node(label: "NamedIndividual", additionalLabels: ["Resource","Solution"]) {
+	actsIsPartOf: [Act!]! @relationship(type: "IS_PART_OF", direction: IN)
+	dataCorpusCreation2SIsPartOf: [Data_Corpus_Creation2!]! @relationship(type: "IS_PART_OF", direction: IN)
+	dataIntegrationsIsImplementing: [Data_Integration!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	dataOrganizationsIsImplementing: [Data_Organization!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	dataProcessingTasksIsPartOf: [Data_Processing_Task!]! @relationship(type: "IS_PART_OF", direction: IN)
+	dataProvisionsIsdetermining: [Data_Provision!]! @relationship(type: "ISDETERMINING", direction: IN)
+	dataRepresentationModellingsIsPartOf: [Data_Representation_Modelling!]! @relationship(type: "IS_PART_OF", direction: IN)
+	humanDependencyResolutionsIssolvedby: [Human_Dependency_Resolution!]! @relationship(type: "ISSOLVEDBY", direction: IN)
+	informationExtraction2SIsPartOf: [Information_Extraction2!]! @relationship(type: "IS_PART_OF", direction: IN)
+	informationExtractionsIsPartOf: [Information_Extraction!]! @relationship(type: "IS_PART_OF", direction: IN)
+	isImplementingInformationExtractions: [Information_Extraction!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingNamedIndividual10S: [NamedIndividual10!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingNamedIndividual4S: [NamedIndividual4!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isPartOfNamedIndividual4S: [NamedIndividual4!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	namedIndividual10SIsPartOf: [NamedIndividual10!]! @relationship(type: "IS_PART_OF", direction: IN)
+	namedIndividual17SIsPartOf: [NamedIndividual17!]! @relationship(type: "IS_PART_OF", direction: IN)
+	namedIndividual2SIsappliedin: [NamedIndividual2!]! @relationship(type: "ISAPPLIEDIN", direction: IN)
+	namedIndividual3SIssolvedby: [NamedIndividual3!]! @relationship(type: "ISSOLVEDBY", direction: IN)
+	namedIndividual4SIsImplementing: [NamedIndividual4!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	namedIndividual4SIsPartOf: [NamedIndividual4!]! @relationship(type: "IS_PART_OF", direction: IN)
+	namedIndividual8SIsImplementing: [NamedIndividual8!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	namedIndividual8SIsPartOf: [NamedIndividual8!]! @relationship(type: "IS_PART_OF", direction: IN)
+	uri: String!
+}
+
+type NamedIndividual5 @node(label: "NamedIndividual", additionalLabels: ["NeuralNetwork_Creation","Resource"]) {
+	isPartOfNamedIndividual8S: [NamedIndividual8!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	number_of_convolutional_layers: BigInt
+	uri: String!
+}
+
+type NamedIndividual6 @node(label: "NamedIndividual", additionalLabels: ["Optimization_Algorithm","Resource"]) {
+	isImplementingNamedIndividual17S: [NamedIndividual17!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isPartOfDataRepresentationModellings: [Data_Representation_Modelling!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	namedIndividual3SIssolvedby: [NamedIndividual3!]! @relationship(type: "ISSOLVEDBY", direction: IN)
+	namedIndividual8SRequires: [NamedIndividual8!]! @relationship(type: "REQUIRES", direction: IN)
+	uri: String!
+}
+
+type NamedIndividual7 @node(label: "NamedIndividual", additionalLabels: ["Regression_Metrics","Resource"]) {
+	uri: String!
+}
+
+type NamedIndividual8 @node(label: "NamedIndividual", additionalLabels: ["Neural_Networks","Resource"]) {
+	dataOrganizationsIsImplementing: [Data_Organization!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	isImplementingDataProcessingTasks: [Data_Processing_Task!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingInformationExtractions: [Information_Extraction!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingNamedIndividual4S: [NamedIndividual4!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isImplementingNamedIndividual8S: [NamedIndividual8!]! @relationship(type: "IS_IMPLEMENTING", direction: OUT)
+	isPartOfActs: [Act!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isPartOfDataProcessingTasks: [Data_Processing_Task!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isPartOfDataRepresentationModellings: [Data_Representation_Modelling!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isPartOfLearningAlgorithms: [Learning_Algorithm!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isPartOfMachineLearning2S: [Machine_Learning2!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isPartOfMachineLearnings: [Machine_Learning!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	isPartOfNamedIndividual4S: [NamedIndividual4!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	learningAlgorithmsIsImplementing: [Learning_Algorithm!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	machineLearningsCallsforexecution: [Machine_Learning!]! @relationship(type: "CALLSFOREXECUTION", direction: IN)
+	namedIndividual5SIsPartOf: [NamedIndividual5!]! @relationship(type: "IS_PART_OF", direction: IN)
+	namedIndividual8SIsImplementing: [NamedIndividual8!]! @relationship(type: "IS_IMPLEMENTING", direction: IN)
+	requiresComputingUnits: [Computing_Units!]! @relationship(type: "REQUIRES", direction: OUT)
+	requiresDataTypes: [Data_Type!]! @relationship(type: "REQUIRES", direction: OUT)
+	requiresLearningAlgorithms: [Learning_Algorithm!]! @relationship(type: "REQUIRES", direction: OUT)
+	requiresMachineLearnings: [Machine_Learning!]! @relationship(type: "REQUIRES", direction: OUT)
+	requiresNamedIndividual6S: [NamedIndividual6!]! @relationship(type: "REQUIRES", direction: OUT)
+	uri: String!
+}
+
+type NamedIndividual9 @node(label: "NamedIndividual", additionalLabels: ["Resource","Roles"]) {
+	areasRequires: [Area!]! @relationship(type: "REQUIRES", direction: IN)
+	isPartOfAreas: [Area!]! @relationship(type: "IS_PART_OF", direction: OUT)
+	uri: String!
+}
+
+type ObjectProperty @node(additionalLabels: ["Resource"]) {
+	resource2SOnproperty: [Resource2!]! @relationship(type: "ONPROPERTY", direction: IN)
+	subpropertyofFunctionalProperties: [FunctionalProperty!]! @relationship(type: "SUBPROPERTYOF", direction: OUT)
+	subpropertyofResources: [Resource!]! @relationship(type: "SUBPROPERTYOF", direction: OUT)
+	uri: String!
+}
+
+type Ontology @node(additionalLabels: ["Resource"]) {
+	testcaseResources: [Resource!]! @relationship(type: "TESTCASE", direction: OUT)
+	uri: String!
+}
+
+type Resource {
+	axiom: String
+	class3SIntersectionof: [Class3!]! @relationship(type: "INTERSECTIONOF", direction: IN)
+	class3SUnionof: [Class3!]! @relationship(type: "UNIONOF", direction: IN)
+	datatypePropertiesRange: [DatatypeProperty!]! @relationship(type: "RANGE", direction: IN)
+	datatypePropertiesSubpropertyof: [DatatypeProperty!]! @relationship(type: "SUBPROPERTYOF", direction: IN)
+	datatypesOndatatype: [Datatype!]! @relationship(type: "ONDATATYPE", direction: IN)
+	datatypesWithrestrictions: [Datatype!]! @relationship(type: "WITHRESTRICTIONS", direction: IN)
+	firstClass3S: [Class3!]! @relationship(type: "FIRST", direction: OUT)
+	firstResource2S: [Resource2!]! @relationship(type: "FIRST", direction: OUT)
+	firstResources: [Resource!]! @relationship(type: "FIRST", direction: OUT)
+	functionalPropertiesSubpropertyof: [FunctionalProperty!]! @relationship(type: "SUBPROPERTYOF", direction: IN)
+	listsRest: [List!]! @relationship(type: "REST", direction: IN)
+	maxInclusive: BigInt
+	minInclusive: BigInt
+	objectPropertiesSubpropertyof: [ObjectProperty!]! @relationship(type: "SUBPROPERTYOF", direction: IN)
+	ontologiesTestcase: [Ontology!]! @relationship(type: "TESTCASE", direction: IN)
+	resource2SSomevaluesfrom: [Resource2!]! @relationship(type: "SOMEVALUESFROM", direction: IN)
+	resourcesFirst: [Resource!]! @relationship(type: "FIRST", direction: IN)
+	resourcesRest: [Resource!]! @relationship(type: "REST", direction: IN)
+	restResources: [Resource!]! @relationship(type: "REST", direction: OUT)
+	type: Boolean
+	uri: String!
+}
+
+type Resource2 @node(label: "Resource", additionalLabels: ["Restriction"]) {
+	class2SSubclassof: [Class2!]! @relationship(type: "SUBCLASSOF", direction: IN)
+	class3SEquivalentclass: [Class3!]! @relationship(type: "EQUIVALENTCLASS", direction: IN)
+	class3SSubclassof: [Class3!]! @relationship(type: "SUBCLASSOF", direction: IN)
+	hasValue: Boolean
+	namedIndividual11SType: [NamedIndividual11!]! @relationship(type: "TYPE", direction: IN)
+	onpropertyDatatypeProperties: [DatatypeProperty!]! @relationship(type: "ONPROPERTY", direction: OUT)
+	onpropertyFunctionalProperties: [FunctionalProperty!]! @relationship(type: "ONPROPERTY", direction: OUT)
+	onpropertyObjectProperties: [ObjectProperty!]! @relationship(type: "ONPROPERTY", direction: OUT)
+	resourcesFirst: [Resource!]! @relationship(type: "FIRST", direction: IN)
+	somevaluesfromClass3S: [Class3!]! @relationship(type: "SOMEVALUESFROM", direction: OUT)
+	somevaluesfromClass4S: [Class4!]! @relationship(type: "SOMEVALUESFROM", direction: OUT)
+	somevaluesfromDatatypes: [Datatype!]! @relationship(type: "SOMEVALUESFROM", direction: OUT)
+	somevaluesfromResources: [Resource!]! @relationship(type: "SOMEVALUESFROM", direction: OUT)
+	uri: String!
+}
+
+type _GraphConfig {
+	_applyNeo4jNaming: Boolean!
+	_classLabel: String!
+	_dataTypePropertyLabel: String!
+	_domainRel: String!
+	_handleMultival: BigInt!
+	_handleRDFTypes: BigInt!
+	_handleVocabUris: BigInt!
+	_keepCustomDataTypes: Boolean!
+	_keepLangTag: Boolean!
+	_objectPropertyLabel: String!
+	_rangeRel: String!
+	_subClassOfRel: String!
+	_subPropertyOfRel: String!
+}

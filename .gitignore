@@ -63,3 +63,8 @@ logs/
 # Temporary files
 tmp/
 temp/
+# Additional exclusions
+git-lfs
+man/
+*.crt
+http_ca.crt

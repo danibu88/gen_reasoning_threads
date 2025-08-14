@@ -1,8 +1,3 @@
-﻿Relation,Description
-ns0_IsSolvedBY,indicates usually an opportunity that is solved by an instance related to a solution class 
-ns0_Is_a ,shows a type relationship 
-ns0_Is_Implementing ,"indicates usually a solution concept on layers of system, data, or technology that implements a concept on Autonomization or Business, usually related to the class of Task "
-ns0_Is_part_of , shows an aggregation or composition to a combined solution 
-ns0_requires , indicates a solution instance that requires another solution instance 
-ns2_BelongsTo ,indicates a solution instance that belongs to another solution instance 
-ns2_IsDetermining ,"shows determination of an instance to another instance, usually from a Business or Autonomization instance to a solution instance but also governance to a solution instance "
+version https://git-lfs.github.com/spec/v1
+oid sha256:a6b59f666c6cb550a0becb91c4c9747b07ab8a53d7123a8d374848931623348a
+size 825

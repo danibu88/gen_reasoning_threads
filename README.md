@@ -276,6 +276,8 @@ bibtex@misc{burkhardt2025reteval,
   primaryClass={cs.AI},
   url={https://arxiv.org/abs/2408.xxxxx}
 }
+📜 License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 🙏 Acknowledgments
 Neo4j Community: For graph database infrastructure

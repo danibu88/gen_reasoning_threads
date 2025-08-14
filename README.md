@@ -280,7 +280,7 @@ bibtex@misc{burkhardt2025reteval,
 }
 
 📜 License
-This project is licensed under the MIT License - see the [LICENSE](https://www.mit.edu/~amini/LICENSE.md) file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 🙏 Acknowledgments
 Neo4j Community: For graph database infrastructure

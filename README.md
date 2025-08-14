@@ -251,10 +251,12 @@ cd src/graphql
 npm install
 npx env-cmd -f .env.development node graphql.js
 
-Adding New Models
+# Adding New Models
 bash# Add new model to the ReT-Eval pipeline
 python scripts/train_new_model.py --config configs/new_model.yaml
 python scripts/evaluate_model.py --model models/new_model.pkl
+
+# Other things to consider
 
 🤝 Contributing
 We welcome contributions! Please see our Contributing Guide for details.
@@ -276,8 +278,9 @@ bibtex@misc{burkhardt2025reteval,
   primaryClass={cs.AI},
   url={https://arxiv.org/abs/2408.xxxxx}
 }
+
 📜 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://www.mit.edu/~amini/LICENSE.md) file for details.
 
 🙏 Acknowledgments
 Neo4j Community: For graph database infrastructure
